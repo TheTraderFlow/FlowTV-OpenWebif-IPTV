@@ -281,7 +281,7 @@ spendieren**, mit Kopierknöpfen und QR-Codes – so gibt es für sie nur eine
 Stelle, und die kann nicht auseinanderlaufen.
 
 Eine Rückmeldung ist genauso viel wert wie Geld: Fehler und Ideen sind das,
-woraus die nächste Fassung entsteht.
+woraus die nächste Version entsteht.
 
 ### Lizenz
 
@@ -289,13 +289,13 @@ Der Programmcode ist **proprietär** – siehe [LICENSE.txt](LICENSE.txt). Er st
 nicht unter einer Open-Source-Lizenz, und dieses Repository enthält keinen
 Quelltext.
 
-Die App liefert Software Dritter mit; Name, Fassung, Lizenz und Projektseite
+Die App liefert Software Dritter mit; Name, Version, Lizenz und Projektseite
 jedes Bestandteils stehen in
 [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt), die vollständigen
 Lizenztexte im Ordner [licenses](licenses). Insbesondere wird **LibVLC unter der
 LGPL-2.1-or-later** verwendet: Die Dateien liegen als eigene, austauschbare
 Bibliotheken im Unterordner `libvlc` neben dem Programm – weder statisch
-eingebunden noch zusammengepackt – und lassen sich gegen eine andere Fassung
+eingebunden noch zusammengepackt – und lassen sich gegen eine andere Version
 tauschen. Quelltexte: <https://code.videolan.org/videolan/vlc>
 
 FlowTV liefert **keine Senderlisten, Picons oder Programmdaten** mit. Alles, was

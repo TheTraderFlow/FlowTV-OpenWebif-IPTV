@@ -1,4 +1,4 @@
-# Änderungen / Changelog
+﻿# Änderungen / Changelog
 
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
