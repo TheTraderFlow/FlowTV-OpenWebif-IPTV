@@ -71,6 +71,16 @@ is a legitimate decision; the warning says nothing about what the program does.
 **Windows Firewall** will ask for network access on the first start. FlowTV needs
 it for **private networks** – that is where your receiver is.
 
+**The first start can take up to a minute.** That is Windows, not FlowTV:
+playback is done by LibVLC, which brings around 270 plugin files, and Windows
+Defender looks at every one of them once. Measured on a fast PC: about 30
+seconds for files it does not know yet, and **0.2 seconds** once it does. The
+window itself is there immediately and can be used; only the picture waits.
+
+If it bothers you, adding the FlowTV folder to the Defender exclusions makes it
+quick every time – that is your decision, and the program works fine without
+it.
+
 ### What you need
 
 **On the PC – nothing to install beforehand:**
@@ -218,6 +228,16 @@ nichts darüber aus, was das Programm tut.
 
 **Die Windows-Firewall** fragt beim ersten Start nach Netzwerkzugriff. FlowTV
 braucht ihn für **private Netzwerke** – dort steht dein Receiver.
+
+**Der erste Start kann bis zu einer Minute dauern.** Das ist Windows und nicht
+FlowTV: Die Wiedergabe übernimmt LibVLC, das rund 270 Plugin-Dateien mitbringt,
+und der Windows Defender sieht sich jede einmal an. Gemessen auf einem
+schnellen PC: etwa 30 Sekunden für Dateien, die er noch nicht kennt, und
+**0,2 Sekunden**, sobald er sie kennt. Das Fenster ist sofort da und lässt sich
+bedienen; nur das Bild lässt auf sich warten.
+
+Wen es stört, der nimmt den FlowTV-Ordner in die Ausnahmen des Defenders auf –
+das ist deine Entscheidung, und ohne funktioniert das Programm genauso.
 
 ### Was du brauchst
 
