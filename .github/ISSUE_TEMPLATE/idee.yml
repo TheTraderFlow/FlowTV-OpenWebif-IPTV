@@ -1,0 +1,22 @@
+name: Idee oder Verbesserung / Idea or improvement
+description: Etwas fehlt oder ginge besser. / Something is missing or could be better.
+labels: ["idee"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Deutsch oder Englisch – beides ist willkommen. / German or English – both are fine.
+
+  - type: textarea
+    id: idee
+    attributes:
+      label: Worum geht es? / What is it about?
+      description: Was fehlt dir, und wofür brauchst du es? / What is missing, and what would you use it for?
+    validations:
+      required: true
+
+  - type: textarea
+    id: heute
+    attributes:
+      label: Wie behilfst du dir heute? / How do you work around it today?
+      description: Das sagt oft mehr über die Lösung als der Wunsch selbst. / This often says more about the right solution than the wish itself.

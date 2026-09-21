@@ -1,0 +1,13 @@
+# Dieses Repository enthaelt keinen Quelltext - nur die Beschreibung, die
+# Lizenzen und die Releases. Was hier trotzdem nicht hineingehoert:
+
+# Die Programmdateien selbst. Sie werden als Release hochgeladen und nicht
+# eingecheckt: Ein Repository ist kein Dateiablage, und eine 80 MB grosse ZIP
+# bliebe fuer immer in der Geschichte stehen.
+*.zip
+*.exe
+*.dll
+
+# Windows
+Thumbs.db
+desktop.ini

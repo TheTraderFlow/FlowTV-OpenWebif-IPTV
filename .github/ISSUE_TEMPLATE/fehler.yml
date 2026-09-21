@@ -1,0 +1,70 @@
+name: Fehler melden / Report a bug
+description: Etwas funktioniert nicht oder sieht falsch aus. / Something does not work or looks wrong.
+labels: ["fehler"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Danke, dass du dir die Zeit nimmst.** Deutsch oder Englisch – beides ist willkommen.
+        German or English – both are fine.
+
+        Bitte hänge, wenn es geht, den **Diagnose-Export** an
+        (in der App: Einstellungen → Diagnose). Er anonymisiert Zugangsdaten und
+        enthält genau die Antworten deiner Box, die zum Verstehen nötig sind.
+
+  - type: textarea
+    id: was-passiert
+    attributes:
+      label: Was passiert? / What happens?
+      description: Was hast du getan, was ist passiert, was hättest du erwartet? / What did you do, what happened, what did you expect?
+    validations:
+      required: true
+
+  - type: input
+    id: box
+    attributes:
+      label: Receiver
+      description: Hersteller und Modell / Make and model
+      placeholder: "z. B. GigaBlue UHD TRIO 4K"
+    validations:
+      required: true
+
+  - type: input
+    id: image
+    attributes:
+      label: Image und Fassung / Image and version
+      placeholder: "z. B. openATV 7.6"
+    validations:
+      required: true
+
+  - type: input
+    id: openwebif
+    attributes:
+      label: OpenWebif-Fassung / OpenWebif version
+      description: Steht in der App unter Einstellungen → Verbindung, oder im Browser unter /api/about
+      placeholder: "z. B. 2.4.0"
+
+  - type: input
+    id: tuner
+    attributes:
+      label: Wie viele Tuner hat die Box? / How many tuners does the box have?
+      description: Wichtig, weil hier nur eine Box mit einem Tuner steht. / Important, because only a single-tuner box was available for testing.
+      placeholder: "z. B. 2 (DVB-S2)"
+
+  - type: input
+    id: version
+    attributes:
+      label: FlowTV-Fassung / FlowTV version
+      description: Steht auf der Seite „Über" / Shown on the „About" page
+      placeholder: "z. B. 1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: protokoll
+    attributes:
+      label: Protokoll / Log
+      description: |
+        Der Eintrag zur passenden Uhrzeit aus %AppData%\FlowTV\logs hilft sehr.
+        The entry at the matching time from %AppData%\FlowTV\logs helps a lot.
+      render: text

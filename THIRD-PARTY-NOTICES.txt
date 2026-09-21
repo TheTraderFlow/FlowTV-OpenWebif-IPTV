@@ -1,0 +1,226 @@
+FlowTV - OpenWebif-IPTV
+Hinweise zu Bestandteilen Dritter / Third-party notices
+
+Diese Anwendung enthaelt Software Dritter. Nachfolgend stehen Name,
+Fassung, Lizenz und Projektseite jedes Bestandteils. Die vollstaendigen
+Lizenztexte liegen im Ordner "licenses" neben dieser Datei.
+
+This application contains third-party software. Name, version, license and
+project page of each component are listed below. The full license texts are
+in the "licenses" folder next to this file.
+
+--------------------------------------------------------------------
+
+.NET Runtime und Windows Desktop Runtime 10.0
+  Lizenz / License: MIT
+  https://github.com/dotnet/runtime
+
+BouncyCastle.Cryptography 2.7.0
+  Lizenz / License: MIT
+  https://www.bouncycastle.org/stable/nuget/csharp/website
+
+CommunityToolkit.Mvvm 8.4.2
+  Lizenz / License: MIT
+  https://github.com/CommunityToolkit/dotnet
+
+FluentFTP 54.2.1
+  Lizenz / License: MIT
+  https://github.com/robinrodricks/FluentFTP
+
+LibVLCSharp 3.10.1
+  Lizenz / License: LGPL-2.1-or-later
+  https://code.videolan.org/videolan/LibVLCSharp
+
+Microsoft.Data.Sqlite 10.0.12
+  Lizenz / License: MIT
+  https://docs.microsoft.com/dotnet/standard/data/sqlite/
+
+Microsoft.Data.Sqlite.Core 10.0.12
+  Lizenz / License: MIT
+  https://docs.microsoft.com/dotnet/standard/data/sqlite/
+
+Microsoft.Extensions.Configuration 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Configuration.Abstractions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Configuration.Binder 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Configuration.CommandLine 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Configuration.FileExtensions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Configuration.Json 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Configuration.UserSecrets 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.DependencyInjection 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.DependencyInjection.Abstractions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Diagnostics 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Diagnostics.Abstractions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.FileProviders.Abstractions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.FileProviders.Physical 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.FileSystemGlobbing 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Hosting 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Hosting.Abstractions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Logging 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Logging.Abstractions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Logging.Configuration 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Logging.Console 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Logging.Debug 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Logging.EventLog 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Logging.EventSource 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Options 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Options.ConfigurationExtensions 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+Microsoft.Extensions.Primitives 10.0.12
+  Lizenz / License: MIT
+  https://dot.net/
+
+QRCoder 1.8.0
+  Lizenz / License: MIT
+  https://github.com/codebude/QRCoder
+
+Serilog 4.3.0
+  Lizenz / License: Apache-2.0
+  https://serilog.net/
+
+Serilog.Extensions.Hosting 10.0.0
+  Lizenz / License: Apache-2.0
+  https://github.com/serilog/serilog-extensions-hosting
+
+Serilog.Extensions.Logging 10.0.0
+  Lizenz / License: Apache-2.0
+  https://github.com/serilog/serilog-extensions-logging
+
+Serilog.Sinks.File 7.0.0
+  Lizenz / License: Apache-2.0
+  https://github.com/serilog/serilog-sinks-file
+
+SQLitePCLRaw.bundle_e_sqlite3 2.1.12
+  Lizenz / License: Apache-2.0
+  https://github.com/ericsink/SQLitePCL.raw
+
+SQLitePCLRaw.core 2.1.12
+  Lizenz / License: Apache-2.0
+  https://github.com/ericsink/SQLitePCL.raw
+
+SQLitePCLRaw.lib.e_sqlite3 2.1.12
+  Lizenz / License: Apache-2.0
+  https://github.com/ericsink/SQLitePCL.raw
+
+SQLitePCLRaw.provider.e_sqlite3 2.1.12
+  Lizenz / License: Apache-2.0
+  https://github.com/ericsink/SQLitePCL.raw
+
+SSH.NET 2026.0.0
+  Lizenz / License: MIT
+  https://github.com/sshnet/SSH.NET
+
+VideoLAN.LibVLC.Windows 3.0.23.1
+  Lizenz / License: LGPL-2.1-or-later
+  https://code.videolan.org/videolan/libvlc-nuget
+
+WPF-UI 4.3.0
+  Lizenz / License: MIT
+  https://github.com/lepoco/wpfui
+
+WPF-UI.Abstractions 4.3.0
+  Lizenz / License: MIT
+  https://github.com/lepoco/wpfui
+
+--------------------------------------------------------------------
+
+LibVLC (LGPL-2.1-or-later)
+
+LibVLC liegt als eigene, austauschbare DLL-Sammlung im Unterordner
+"libvlc" neben der Anwendung und ist weder statisch eingebunden noch
+mit ihr zusammengepackt. Wer eine andere Fassung von LibVLC benutzen
+moechte, kann die Dateien dort austauschen. Die Quelltexte sind unter
+https://code.videolan.org/videolan/vlc erhaeltlich.
+
+LibVLC is provided as a separate, replaceable set of DLLs in the
+"libvlc" subfolder next to the application. It is neither statically
+linked nor bundled into the executable, and the files there can be
+replaced with another build. Sources: https://code.videolan.org/videolan/vlc
+
+--------------------------------------------------------------------
+
+Nicht enthalten / Not included
+
+Picons, Sendernamen und Programmdaten stammen ausschliesslich von der
+Box des Nutzers. Diese Anwendung liefert keine fremden Bilder, Logos
+oder Markenzeichen mit.
+
+Picons, channel names and programme data come solely from the user's own
+receiver. This application ships no third-party images, logos or trademarks.

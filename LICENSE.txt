@@ -1,0 +1,181 @@
+FlowTV - OpenWebif-IPTV
+Endnutzer-Lizenzbedingungen / End User License Terms
+
+Copyright (c) 2026 TheTraderFlow. Alle Rechte vorbehalten. / All rights reserved.
+
+====================================================================
+DEUTSCH
+====================================================================
+
+1. Gegenstand
+
+Diese Bedingungen gelten fuer die Anwendung "FlowTV - OpenWebif-IPTV"
+(nachfolgend "die Software") einschliesslich ihrer Programmdateien,
+Grafiken und Begleitunterlagen, soweit diese vom Rechteinhaber stammen.
+Bestandteile Dritter, die mit der Software ausgeliefert werden,
+unterliegen ihren eigenen Lizenzen; siehe Abschnitt 6.
+
+2. Kein Open Source
+
+Die Software ist proprietaer. Sie steht ausdruecklich nicht unter einer
+Open-Source-Lizenz. Der Quelltext wird nicht mitgeliefert und nicht
+veroeffentlicht.
+
+3. Nutzungsrecht
+
+Der Rechteinhaber raeumt dem Nutzer ein einfaches, nicht ausschliessliches,
+nicht uebertragbares Recht ein, die Software auf den eigenen Geraeten zu
+installieren und zu benutzen. Das Recht ist zeitlich unbefristet, solange
+diese Bedingungen eingehalten werden.
+
+4. Einschraenkungen
+
+Ohne vorherige schriftliche Zustimmung des Rechteinhabers ist untersagt:
+
+  a) die Software zu verkaufen, zu vermieten, zu verleihen, zu
+     unterlizenzieren oder anderweitig entgeltlich weiterzugeben;
+  b) die Software zu veraendern, zu uebersetzen, zurueckzuentwickeln,
+     zu dekompilieren oder zu disassemblieren, soweit nicht zwingendes
+     Recht dies ausdruecklich erlaubt;
+  c) Urheberrechtsvermerke, Marken oder sonstige Hinweise zu entfernen
+     oder zu veraendern.
+
+Die unveraenderte, unentgeltliche Weitergabe des vollstaendigen
+Programmordners einschliesslich dieser Datei und der Datei
+THIRD-PARTY-NOTICES.txt ist erlaubt.
+
+5. Keine Verbindung zu Dritten
+
+Die Software ist ein eigenstaendiges Werk. Sie ist nicht offiziell
+verbunden mit dem OpenWebif-Projekt, mit VideoLAN oder mit Herstellern
+von Receivern, und wird von diesen weder unterstuetzt noch geprueft.
+Genannte Namen und Marken gehoeren ihren jeweiligen Inhabern und werden
+nur zur Beschreibung der Schnittstelle verwendet.
+
+Die Software liefert keine Senderlisten, Picons, Programmdaten oder
+Inhalte mit. Alles, was angezeigt wird, stammt vom Receiver des Nutzers.
+Fuer die rechtmaessige Nutzung der dort vorhandenen Inhalte ist der
+Nutzer selbst verantwortlich.
+
+6. Bestandteile Dritter
+
+Die Software liefert Software Dritter mit. Name, Fassung, Lizenz und
+Projektseite stehen in THIRD-PARTY-NOTICES.txt, die vollstaendigen
+Lizenztexte im Ordner "licenses". Insbesondere wird LibVLC unter der
+LGPL-2.1-or-later verwendet; die zugehoerigen Dateien liegen als eigene,
+austauschbare Bibliotheken im Unterordner "libvlc" und sind weder
+statisch eingebunden noch mit der Anwendung zusammengepackt. Bei
+Widerspruechen gehen die Lizenzen der Bestandteile Dritter diesen
+Bedingungen fuer den jeweiligen Bestandteil vor.
+
+7. Gewaehrleistung
+
+Die Software wird "wie besehen" ueberlassen, ohne jede ausdrueckliche
+oder stillschweigende Gewaehrleistung, insbesondere ohne Gewaehr fuer
+Marktgaengigkeit, Eignung fuer einen bestimmten Zweck oder
+Rechtsmangelfreiheit. Es wird nicht zugesichert, dass die Software mit
+jedem Receiver, jedem Image oder jeder Fassung von OpenWebif
+zusammenarbeitet.
+
+8. Haftung
+
+Der Rechteinhaber haftet nicht fuer Schaeden, die aus der Nutzung oder
+der Unmoeglichkeit der Nutzung der Software entstehen, einschliesslich
+Datenverlust, entgangenem Gewinn oder Schaeden am Receiver. Die Haftung
+fuer Vorsatz und grobe Fahrlaessigkeit sowie nach zwingendem Recht,
+insbesondere dem Produkthaftungsgesetz und bei Verletzung von Leben,
+Koerper oder Gesundheit, bleibt unberuehrt.
+
+9. Beendigung
+
+Bei einem Verstoss gegen diese Bedingungen endet das Nutzungsrecht
+automatisch. Der Nutzer hat die Software dann zu loeschen.
+
+10. Schlussbestimmungen
+
+Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des
+UN-Kaufrechts. Ist eine Bestimmung unwirksam, bleiben die uebrigen
+wirksam.
+
+====================================================================
+ENGLISH
+====================================================================
+
+1. Subject
+
+These terms apply to the application "FlowTV - OpenWebif-IPTV" (the
+"Software"), including its program files, graphics and documentation, as
+far as they originate from the rights holder. Third-party components
+shipped with the Software are governed by their own licenses; see
+section 6.
+
+2. Not open source
+
+The Software is proprietary. It is expressly not released under an
+open-source license. The source code is neither included nor published.
+
+3. Grant of use
+
+The rights holder grants the user a simple, non-exclusive,
+non-transferable right to install and use the Software on the user's own
+devices, for an unlimited period as long as these terms are observed.
+
+4. Restrictions
+
+Without prior written consent of the rights holder, the user must not:
+
+  a) sell, rent, lend, sublicense or otherwise distribute the Software
+     for a fee;
+  b) modify, translate, reverse engineer, decompile or disassemble the
+     Software, except where mandatory law expressly permits it;
+  c) remove or alter copyright notices, trademarks or other notices.
+
+Passing on the complete, unmodified program folder free of charge,
+including this file and THIRD-PARTY-NOTICES.txt, is permitted.
+
+5. No affiliation
+
+The Software is an independent work. It is not officially affiliated
+with the OpenWebif project, with VideoLAN, or with any receiver
+manufacturer, and is neither endorsed nor reviewed by them. Names and
+trademarks mentioned belong to their respective owners and are used only
+to describe the interface.
+
+The Software ships no channel lists, picons, programme data or media
+content. Everything shown comes from the user's own receiver. The user
+is responsible for the lawful use of that content.
+
+6. Third-party components
+
+The Software ships third-party software. Name, version, license and
+project page are listed in THIRD-PARTY-NOTICES.txt; the full license
+texts are in the "licenses" folder. In particular, LibVLC is used under
+LGPL-2.1-or-later; its files are provided as separate, replaceable
+libraries in the "libvlc" subfolder and are neither statically linked
+nor bundled into the application. In case of conflict, the license of a
+third-party component prevails over these terms for that component.
+
+7. Warranty
+
+The Software is provided "as is", without warranty of any kind, express
+or implied, including but not limited to merchantability, fitness for a
+particular purpose and non-infringement. No assurance is given that the
+Software works with every receiver, image or version of OpenWebif.
+
+8. Liability
+
+The rights holder is not liable for damages arising from the use of or
+inability to use the Software, including loss of data, loss of profit or
+damage to the receiver. Liability for intent and gross negligence and
+liability under mandatory law remain unaffected.
+
+9. Termination
+
+The right of use ends automatically upon breach of these terms. The user
+must then delete the Software.
+
+10. Final provisions
+
+German law applies, excluding the UN Convention on Contracts for the
+International Sale of Goods. If a provision is invalid, the remaining
+provisions stay in force.
