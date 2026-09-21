@@ -24,7 +24,7 @@ screen while switching channels.
 ### What it does
 
 - **Channel lists with picons**, straight from your box. Favourites and a
-  „recently watched" list live on the PC, so they are there even when the box is
+  “recently watched” list live on the PC, so they are there even when the box is
   off.
 - **Live TV** through LibVLC, with the standard port and the stream relay port
   for encrypted channels; if one does not answer, the other is used.
@@ -44,7 +44,7 @@ screen while switching channels.
 |  |  |
 |---|---|
 | ![Programme guide](docs/02-tv-guide.png) | ![Recordings](docs/03-recordings.png) |
-| **Programme guide** – grid, „now" jump, the running programme marked | **Recordings** – watch with resume, download, rename, move |
+| **Programme guide** – grid, “now” jump, the running programme marked | **Recordings** – watch with resume, download, rename, move |
 | ![Timers](docs/04-timers.png) | ![Settings](docs/05-settings.png) |
 | **Timers** – recording and switch timers, with what the tuners allow | **Settings** – everything adjustable, and every value says where it came from |
 
@@ -63,7 +63,7 @@ login and then asks the box what it can do:
    from inside the ZIP.**
 3. Start `FlowTV.exe`.
 
-**Windows will warn you on the first start** („Windows protected your PC"). The
+**Windows will warn you on the first start** (“Windows protected your PC”). The
 program is not code-signed – a certificate costs money that this project does not
 have. Click **More info** and then **Run anyway**. If you would rather not, that
 is a legitimate decision; the warning says nothing about what the program does.
