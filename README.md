@@ -1,8 +1,6 @@
 ﻿<div align="center">
 
-<img src="docs/flowtv-icon.png" alt="FlowTV" width="140">
-
-# FlowTV – OpenWebif-IPTV
+<img src="docs/flowtv-logo.png" alt="FlowTV – OpenWebif-IPTV" width="520">
 
 **Windows client for Enigma2 receivers over OpenWebif**
 
