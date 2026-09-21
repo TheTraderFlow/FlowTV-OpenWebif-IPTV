@@ -28,7 +28,7 @@ Erste Veröffentlichung. / First public release.
 
 **English**
 
-- Channel lists with picons, favourites and a „recently watched" list
+- Channel lists with picons, favourites and a “recently watched” list
 - Live TV through LibVLC, standard and stream relay port with automatic
   fallback; the last frame stays on screen while switching instead of going
   black
