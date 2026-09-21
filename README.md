@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <img src="docs/flowtv-icon.png" alt="FlowTV" width="140">
 
@@ -19,6 +19,8 @@ to the box over **OpenWebif**, shows your own channel lists with picons, the
 programme guide, live TV, timers and recordings – and it never shows a black
 screen while switching channels.
 
+![FlowTV – live TV with channel list, picons and running picture](docs/01-live-tv.png)
+
 ### What it does
 
 - **Channel lists with picons**, straight from your box. Favourites and a
@@ -36,6 +38,22 @@ screen while switching channels.
   and a backup of the box settings.
 - **Dark, TiviMate-like interface**, German and English, adjustable font size and
   freely assignable keys.
+
+### A look inside
+
+|  |  |
+|---|---|
+| ![Programme guide](docs/02-tv-guide.png) | ![Recordings](docs/03-recordings.png) |
+| **Programme guide** – grid, „now" jump, the running programme marked | **Recordings** – watch with resume, download, rename, move |
+| ![Timers](docs/04-timers.png) | ![Settings](docs/05-settings.png) |
+| **Timers** – recording and switch timers, with what the tuners allow | **Settings** – everything adjustable, and every value says where it came from |
+
+The setup wizard on the very first start searches the network, asks for the
+login and then asks the box what it can do:
+
+![Setup wizard – detection](docs/06-setup-wizard.png)
+
+*The pictures show the English interface; the app speaks German as well.*
 
 ### Download and start
 
@@ -149,6 +167,8 @@ Enigma2-Receiver. Es spricht über **OpenWebif** mit der Box, zeigt deine eigene
 Senderlisten mit Picons, die Programmzeitschrift, Live-TV, Timer und Aufnahmen –
 und beim Umschalten gibt es nie ein schwarzes Bild.
 
+![FlowTV – Live-TV mit Senderliste, Picons und laufendem Bild](docs/01-live-tv.png)
+
 ### Was es kann
 
 - **Senderlisten mit Picons**, direkt von der Box. Favoriten und „zuletzt
@@ -165,6 +185,22 @@ und beim Umschalten gibt es nie ein schwarzes Bild.
   vorbereiteten Befehlen und eine Sicherung der Box-Einstellungen.
 - **Dunkle, TiviMate-ähnliche Oberfläche**, Deutsch und Englisch, einstellbare
   Schriftgröße und frei belegbare Tasten.
+
+### Ein Blick hinein
+
+|  |  |
+|---|---|
+| ![TV-Guide](docs/02-tv-guide.png) | ![Aufnahmen](docs/03-recordings.png) |
+| **TV-Guide** – Raster, Sprung auf „jetzt", die laufende Sendung markiert | **Aufnahmen** – ansehen mit Fortsetzen, herunterladen, umbenennen, verschieben |
+| ![Timer](docs/04-timers.png) | ![Einstellungen](docs/05-settings.png) |
+| **Timer** – Aufnahme- und Umschalt-Timer, mit dem, was die Tuner hergeben | **Einstellungen** – alles einstellbar, und bei jedem Wert steht, woher er kommt |
+
+Der Einrichtungsassistent beim allerersten Start sucht im Netzwerk, fragt nach
+der Anmeldung und fragt dann die Box, was sie kann:
+
+![Einrichtungsassistent – Erkennung](docs/06-setup-wizard.png)
+
+*Die Bilder zeigen die englische Oberfläche; die App spricht genauso Deutsch.*
 
 ### Herunterladen und starten
 
