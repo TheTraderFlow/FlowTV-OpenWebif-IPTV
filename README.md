@@ -2,7 +2,7 @@
 
 <img src="docs/flowtv-logo.png" alt="FlowTV – OpenWebif-IPTV" width="520">
 
-**Windows client for Enigma2 receivers over OpenWebif**
+**Client for Enigma2 receivers over OpenWebif – Windows, and Linux as a preview**
 
 [Deutsch](#deutsch) · [English](#english) · [Download](../../releases/latest)
 
@@ -12,7 +12,7 @@
 
 ## English
 
-FlowTV turns a Windows PC into a second TV set for an Enigma2 receiver. It talks
+FlowTV turns a PC into a second TV set for an Enigma2 receiver. It talks
 to the box over **OpenWebif**, shows your own channel lists with picons, the
 programme guide, live TV, timers and recordings – and it never shows a black
 screen while switching channels.
@@ -56,7 +56,7 @@ login and then asks the box what it can do:
 ### Download and start
 
 1. Get the latest `FlowTV-<version>-win-x64.zip` from the
-   [Releases page](../../releases/latest).
+   [Releases page](../../releases/latest). *(Linux: see [below](#linux-preview).)*
 2. Unpack it to any folder – for example `C:\Programme\FlowTV`. **Do not run it
    from inside the ZIP.**
 3. Start `FlowTV.exe`.
@@ -69,15 +69,41 @@ is a legitimate decision; the warning says nothing about what the program does.
 **Windows Firewall** will ask for network access on the first start. FlowTV needs
 it for **private networks** – that is where your receiver is.
 
-**The first start can take up to a minute.** That is Windows, not FlowTV:
+**The first start can take a little longer.** That is Windows, not FlowTV:
 playback is done by LibVLC, which brings around 270 plugin files, and Windows
-Defender looks at every one of them once. Measured on a fast PC: about 30
-seconds for files it does not know yet, and **0.2 seconds** once it does. The
-window itself is there immediately and can be used; only the picture waits.
+Defender looks at every one of them once. Measured: a few seconds up to half a
+minute for files it does not know yet, depending on the PC, and **0.3 seconds**
+once it does. The window itself is there immediately and can be used; only the
+picture waits.
 
 If it bothers you, adding the FlowTV folder to the Defender exclusions makes it
 quick every time – that is your decision, and the program works fine without
 it.
+
+**Updating from 1.0:** unpack the new ZIP into a new folder and start
+`FlowTV.exe`. Settings, profiles, favourites and key bindings live in
+`%AppData%\FlowTV` and carry over. Delete the old folder afterwards.
+
+### Linux (preview)
+
+Since 2.0 there is a Linux version: `FlowTV-<version>-linux-x64.tar.gz` on the
+[Releases page](../../releases/latest).
+
+1. **Install VLC** from your package manager – on Linux, FlowTV uses the system's
+   VLC instead of bringing its own. On Ubuntu and Debian:
+   `sudo apt install vlc`. Without it, FlowTV starts anyway and tells you exactly
+   this.
+2. Unpack the archive and start `./FlowTV` in the unpacked folder.
+
+Settings live in `~/.config/FlowTV`. Passwords are encrypted; the key goes to the
+desktop's keyring (GNOME Keyring or KWallet via `secret-tool`), otherwise into a
+file only you can read.
+
+**Honestly: it is a preview.** It was tested on **Ubuntu 24.04 in WSL2** (the
+Linux inside Windows) against the same box: setup, channel list, picture,
+switching, guide – all fine. **Sound under WSL stutters** – plain VLC does the
+same there, it is WSL's sound bridge, not FlowTV. On a real Linux PC it has not
+been tested yet. Reports are welcome.
 
 ### What you need
 
@@ -87,6 +113,7 @@ it.
 - No .NET: the runtime is inside the folder.
 - No VLC: LibVLC ships as its own DLLs in the `libvlc` subfolder.
 - No Visual C++ redistributable.
+- *Linux: 64-bit (x64) and VLC from the package manager – see above.*
 
 **On the receiver:**
 
@@ -154,7 +181,8 @@ every component are listed in
 [licenses](licenses). In particular **LibVLC is used under LGPL-2.1-or-later**:
 its files are separate, replaceable libraries in the `libvlc` subfolder next to
 the program – neither statically linked nor bundled – and can be exchanged for
-another build. Sources: <https://code.videolan.org/videolan/vlc>
+another build. Sources: <https://code.videolan.org/videolan/vlc>. On Linux,
+FlowTV uses the VLC installed on the system and ships none.
 
 FlowTV ships **no channel lists, picons or programme data**. Everything you see
 comes from your own receiver.
@@ -170,7 +198,7 @@ their respective owners and are used only to describe the interface.
 
 ## Deutsch
 
-FlowTV macht aus einem Windows-PC einen zweiten Fernseher für einen
+FlowTV macht aus einem PC einen zweiten Fernseher für einen
 Enigma2-Receiver. Es spricht über **OpenWebif** mit der Box, zeigt deine eigenen
 Senderlisten mit Picons, die Programmzeitschrift, Live-TV, Timer und Aufnahmen –
 und beim Umschalten gibt es nie ein schwarzes Bild.
@@ -213,7 +241,8 @@ der Anmeldung und fragt dann die Box, was sie kann:
 ### Herunterladen und starten
 
 1. Die neueste `FlowTV-<Version>-win-x64.zip` von der
-   [Releases-Seite](../../releases/latest) holen.
+   [Releases-Seite](../../releases/latest) holen. *(Linux: siehe
+   [unten](#linux-vorschau).)*
 2. In einen beliebigen Ordner **entpacken** – zum Beispiel
    `C:\Programme\FlowTV`. **Nicht aus der ZIP heraus starten.**
 3. `FlowTV.exe` starten.
@@ -227,15 +256,42 @@ nichts darüber aus, was das Programm tut.
 **Die Windows-Firewall** fragt beim ersten Start nach Netzwerkzugriff. FlowTV
 braucht ihn für **private Netzwerke** – dort steht dein Receiver.
 
-**Der erste Start kann bis zu einer Minute dauern.** Das ist Windows und nicht
+**Der erste Start kann etwas länger dauern.** Das ist Windows und nicht
 FlowTV: Die Wiedergabe übernimmt LibVLC, das rund 270 Plugin-Dateien mitbringt,
-und der Windows Defender sieht sich jede einmal an. Gemessen auf einem
-schnellen PC: etwa 30 Sekunden für Dateien, die er noch nicht kennt, und
-**0,2 Sekunden**, sobald er sie kennt. Das Fenster ist sofort da und lässt sich
+und der Windows Defender sieht sich jede einmal an. Gemessen: je nach PC ein
+paar Sekunden bis eine halbe Minute für Dateien, die er noch nicht kennt, und
+**0,3 Sekunden**, sobald er sie kennt. Das Fenster ist sofort da und lässt sich
 bedienen; nur das Bild lässt auf sich warten.
 
 Wen es stört, der nimmt den FlowTV-Ordner in die Ausnahmen des Defenders auf –
 das ist deine Entscheidung, und ohne funktioniert das Programm genauso.
+
+**Update von 1.0:** Die neue ZIP in einen neuen Ordner entpacken und
+`FlowTV.exe` starten. Einstellungen, Profile, Favoriten und Tastenbelegung
+liegen unter `%AppData%\FlowTV` und werden übernommen. Den alten Ordner danach
+löschen.
+
+### Linux (Vorschau)
+
+Seit 2.0 gibt es eine Linux-Fassung: `FlowTV-<Version>-linux-x64.tar.gz` auf der
+[Releases-Seite](../../releases/latest).
+
+1. **VLC installieren** über die Paketverwaltung – unter Linux nutzt FlowTV das
+   VLC des Systems, statt ein eigenes mitzubringen. Unter Ubuntu und Debian:
+   `sudo apt install vlc`. Fehlt es, startet FlowTV trotzdem und sagt genau das.
+2. Das Archiv entpacken und im entpackten Ordner `./FlowTV` starten.
+
+Die Einstellungen liegen unter `~/.config/FlowTV`. Passwörter werden
+verschlüsselt; der Schlüssel liegt im Schlüsselbund des Desktops
+(GNOME-Schlüsselbund oder KWallet über `secret-tool`), sonst in einer Datei, die
+nur du lesen kannst.
+
+**Ehrlich gesagt: eine Vorschau.** Geprüft wurde sie unter **Ubuntu 24.04 in
+WSL2** (dem Linux in Windows) an derselben Box: Einrichtung, Senderliste, Bild,
+Umschalten, TV-Guide – alles in Ordnung. **Der Ton hakt unter WSL** – das
+normale VLC tut dort dasselbe, es liegt an der Tonbrücke von WSL, nicht an
+FlowTV. Auf einem echten Linux-PC ist sie noch nicht geprüft.
+Rückmeldungen sind willkommen.
 
 ### Was du brauchst
 
@@ -245,6 +301,7 @@ das ist deine Entscheidung, und ohne funktioniert das Programm genauso.
 - Kein .NET: Die Laufzeit liegt im Ordner.
 - Kein VLC: LibVLC liegt als eigene DLL-Sammlung im Unterordner `libvlc`.
 - Kein Visual C++ Redistributable.
+- *Linux: 64 Bit (x64) und VLC aus der Paketverwaltung – siehe oben.*
 
 **Auf der Box:**
 
@@ -314,7 +371,8 @@ Lizenztexte im Ordner [licenses](licenses). Insbesondere wird **LibVLC unter der
 LGPL-2.1-or-later** verwendet: Die Dateien liegen als eigene, austauschbare
 Bibliotheken im Unterordner `libvlc` neben dem Programm – weder statisch
 eingebunden noch zusammengepackt – und lassen sich gegen eine andere Version
-tauschen. Quelltexte: <https://code.videolan.org/videolan/vlc>
+tauschen. Quelltexte: <https://code.videolan.org/videolan/vlc>. Unter Linux nutzt
+FlowTV das auf dem System installierte VLC und liefert keines mit.
 
 FlowTV liefert **keine Senderlisten, Picons oder Programmdaten** mit. Alles, was
 zu sehen ist, kommt vom Receiver des Nutzers.
