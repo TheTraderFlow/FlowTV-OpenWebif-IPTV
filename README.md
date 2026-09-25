@@ -37,6 +37,18 @@ screen while switching channels.
 - **Dark, TiviMate-like interface**, German and English, adjustable font size and
   freely assignable keys.
 
+### Why 2.0 – and why it was rebuilt
+
+FlowTV 1.0 was built on WPF, Microsoft's interface technology that only exists
+on Windows. For 2.0 the whole interface was **rebuilt on Avalonia**, which runs
+on Windows, Linux and macOS from one and the same code. What stays the same:
+the functions, the look, your settings. What changes: the same FlowTV can now
+also come to **Linux** (from 2.0, as a preview) and later to the **Mac** – without
+three separate programs that would drift apart.
+
+On the way, many things from everyday use got better – see the
+[changelog](CHANGELOG.md).
+
 ### A look inside
 
 |  |  |
@@ -87,23 +99,63 @@ it.
 ### Linux (preview)
 
 Since 2.0 there is a Linux version: `FlowTV-<version>-linux-x64.tar.gz` on the
-[Releases page](../../releases/latest).
+[Releases page](../../releases/latest). It needs a 64-bit PC (x64) with a normal
+desktop (X11, or Wayland with XWayland – the default on current distributions).
 
-1. **Install VLC** from your package manager – on Linux, FlowTV uses the system's
-   VLC instead of bringing its own. On Ubuntu and Debian:
-   `sudo apt install vlc`. Without it, FlowTV starts anyway and tells you exactly
-   this.
-2. Unpack the archive and start `./FlowTV` in the unpacked folder.
+**1. Install VLC.** On Linux, FlowTV uses the VLC of your system instead of
+bringing its own – that way your distribution keeps it up to date.
 
-Settings live in `~/.config/FlowTV`. Passwords are encrypted; the key goes to the
-desktop's keyring (GNOME Keyring or KWallet via `secret-tool`), otherwise into a
-file only you can read.
+| Distribution | Command |
+|---|---|
+| Ubuntu, Debian, Linux Mint | `sudo apt install vlc` |
+| Fedora | enable [RPM Fusion](https://rpmfusion.org/Configuration), then `sudo dnf install vlc` |
+| Arch, Manjaro | `sudo pacman -S vlc vlc-plugins-all` |
+| openSUSE | `sudo zypper install vlc` (all codecs via [Packman](https://en.opensuse.org/Additional_package_repositories#Packman)) |
+
+Without VLC, FlowTV starts anyway and tells you exactly this, with the command.
+
+**2. Optional: keyring for passwords.** FlowTV encrypts the passwords for your
+box. The key goes to the desktop's keyring (GNOME Keyring, KWallet) via
+`secret-tool`; on Ubuntu/Debian that is `sudo apt install libsecret-tools`.
+Without it, the key is kept in a file only you can read – that works too.
+
+**3. Unpack and start** – in a terminal, in the folder with the download:
+
+```
+tar xzf FlowTV-<version>-linux-x64.tar.gz
+cd FlowTV-<version>-linux-x64
+./FlowTV
+```
+
+**4. Optional: a launcher in the menu.** Save this as
+`~/.local/share/applications/flowtv.desktop` and adjust the path to where you
+unpacked FlowTV:
+
+```
+[Desktop Entry]
+Type=Application
+Name=FlowTV
+Comment=Enigma2 receiver over OpenWebif
+Exec=/home/YOUR-NAME/FlowTV-<version>-linux-x64/FlowTV
+Icon=/home/YOUR-NAME/FlowTV-<version>-linux-x64/flowtv.png
+Categories=AudioVideo;Video;TV;
+```
+
+Settings live in `~/.config/FlowTV`. **Updating:** unpack the new version and
+start it – the settings stay where they are.
 
 **Honestly: it is a preview.** It was tested on **Ubuntu 24.04 in WSL2** (the
 Linux inside Windows) against the same box: setup, channel list, picture,
 switching, guide – all fine. **Sound under WSL stutters** – plain VLC does the
 same there, it is WSL's sound bridge, not FlowTV. On a real Linux PC it has not
-been tested yet. Reports are welcome.
+been tested yet, nor on the other distributions in the table. Reports are very
+welcome.
+
+### Mac
+
+**In preparation.** A Mac version is built from the same code, but there is no
+Mac here to test it on. It will be published once at least the main functions
+have been checked on a real Mac.
 
 ### What you need
 
@@ -222,6 +274,18 @@ und beim Umschalten gibt es nie ein schwarzes Bild.
 - **Dunkle, TiviMate-ähnliche Oberfläche**, Deutsch und Englisch, einstellbare
   Schriftgröße und frei belegbare Tasten.
 
+### Warum 2.0 – und warum neu gebaut
+
+FlowTV 1.0 war mit WPF gebaut, Microsofts Oberflächentechnik, die es nur unter
+Windows gibt. Für 2.0 ist die ganze Oberfläche **auf Avalonia neu gebaut**
+worden – das läuft unter Windows, Linux und macOS aus ein und demselben Code.
+Was bleibt: die Funktionen, das Aussehen, deine Einstellungen. Was sich ändert:
+Dasselbe FlowTV kann jetzt auch auf **Linux** (ab 2.0, als Vorschau) und später
+auf den **Mac** – ohne drei getrennte Programme, die auseinanderlaufen.
+
+Nebenbei ist vieles aus dem Alltag besser geworden – siehe die
+[Änderungen](CHANGELOG.md).
+
 ### Ein Blick hinein
 
 |  |  |
@@ -274,24 +338,65 @@ löschen.
 ### Linux (Vorschau)
 
 Seit 2.0 gibt es eine Linux-Fassung: `FlowTV-<Version>-linux-x64.tar.gz` auf der
-[Releases-Seite](../../releases/latest).
+[Releases-Seite](../../releases/latest). Gebraucht wird ein 64-Bit-PC (x64) mit
+einem gewöhnlichen Desktop (X11, oder Wayland mit XWayland – bei aktuellen
+Distributionen der Normalfall).
 
-1. **VLC installieren** über die Paketverwaltung – unter Linux nutzt FlowTV das
-   VLC des Systems, statt ein eigenes mitzubringen. Unter Ubuntu und Debian:
-   `sudo apt install vlc`. Fehlt es, startet FlowTV trotzdem und sagt genau das.
-2. Das Archiv entpacken und im entpackten Ordner `./FlowTV` starten.
+**1. VLC installieren.** Unter Linux nutzt FlowTV das VLC deines Systems, statt
+ein eigenes mitzubringen – so hält es deine Distribution aktuell.
 
-Die Einstellungen liegen unter `~/.config/FlowTV`. Passwörter werden
-verschlüsselt; der Schlüssel liegt im Schlüsselbund des Desktops
-(GNOME-Schlüsselbund oder KWallet über `secret-tool`), sonst in einer Datei, die
-nur du lesen kannst.
+| Distribution | Befehl |
+|---|---|
+| Ubuntu, Debian, Linux Mint | `sudo apt install vlc` |
+| Fedora | [RPM Fusion](https://rpmfusion.org/Configuration) einschalten, dann `sudo dnf install vlc` |
+| Arch, Manjaro | `sudo pacman -S vlc vlc-plugins-all` |
+| openSUSE | `sudo zypper install vlc` (alle Codecs über [Packman](https://en.opensuse.org/Additional_package_repositories#Packman)) |
+
+Ohne VLC startet FlowTV trotzdem und sagt genau das, samt Befehl.
+
+**2. Optional: Schlüsselbund für die Passwörter.** FlowTV verschlüsselt die
+Passwörter für deine Box. Der Schlüssel kommt in den Schlüsselbund des Desktops
+(GNOME-Schlüsselbund, KWallet) über `secret-tool`; unter Ubuntu/Debian ist das
+`sudo apt install libsecret-tools`. Ohne liegt der Schlüssel in einer Datei, die
+nur du lesen kannst – das geht auch.
+
+**3. Entpacken und starten** – im Terminal, im Ordner mit dem Download:
+
+```
+tar xzf FlowTV-<Version>-linux-x64.tar.gz
+cd FlowTV-<Version>-linux-x64
+./FlowTV
+```
+
+**4. Optional: ein Starter im Menü.** Das hier als
+`~/.local/share/applications/flowtv.desktop` speichern und den Pfad an den Ort
+anpassen, an dem FlowTV entpackt liegt:
+
+```
+[Desktop Entry]
+Type=Application
+Name=FlowTV
+Comment=Enigma2-Receiver über OpenWebif
+Exec=/home/DEIN-NAME/FlowTV-<Version>-linux-x64/FlowTV
+Icon=/home/DEIN-NAME/FlowTV-<Version>-linux-x64/flowtv.png
+Categories=AudioVideo;Video;TV;
+```
+
+Die Einstellungen liegen unter `~/.config/FlowTV`. **Update:** die neue Fassung
+entpacken und starten – die Einstellungen bleiben, wo sie sind.
 
 **Ehrlich gesagt: eine Vorschau.** Geprüft wurde sie unter **Ubuntu 24.04 in
 WSL2** (dem Linux in Windows) an derselben Box: Einrichtung, Senderliste, Bild,
 Umschalten, TV-Guide – alles in Ordnung. **Der Ton hakt unter WSL** – das
 normale VLC tut dort dasselbe, es liegt an der Tonbrücke von WSL, nicht an
-FlowTV. Auf einem echten Linux-PC ist sie noch nicht geprüft.
-Rückmeldungen sind willkommen.
+FlowTV. Auf einem echten Linux-PC ist sie noch nicht geprüft, ebenso wenig auf
+den übrigen Distributionen der Tabelle. Rückmeldungen sind sehr willkommen.
+
+### Mac
+
+**In Vorbereitung.** Eine Mac-Fassung entsteht aus demselben Code, aber hier
+steht kein Mac, auf dem sie sich prüfen ließe. Sie erscheint, sobald zumindest
+die Hauptfunktionen an einem echten Mac geprüft sind.
 
 ### Was du brauchst
 
