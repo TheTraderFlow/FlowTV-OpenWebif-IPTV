@@ -16,6 +16,9 @@ Rebuilt interface and many improvements from everyday use.
 - **Neu: Linux (Vorschau).** Dieselbe App als `linux-x64`. VLC kommt dort aus
   der Paketverwaltung (`sudo apt install vlc`). Geprüft unter Ubuntu 24.04 in
   WSL2 – siehe README.
+- **Neu: Mac (Vorschau, ungetestet).** `FlowTV.app` als Intel-Build, auf
+  Macs mit Apple-Chip über Rosetta 2. Auf einem echten Mac noch nicht geprüft –
+  Rückmeldungen sehr willkommen.
 - **Vollbild auf dem richtigen Bildschirm.** Das Vollbild ist jetzt ein eigenes
   Fenster: Es erscheint auf dem Bildschirm, auf dem FlowTV liegt, lässt sich mit
   „Anderer Bildschirm" weiterschieben und merkt sich die Wahl. Das Hauptfenster
@@ -50,6 +53,9 @@ Rebuilt interface and many improvements from everyday use.
 - **New: Linux (preview).** The same app as `linux-x64`. VLC comes from the
   package manager there (`sudo apt install vlc`). Tested on Ubuntu 24.04 in
   WSL2 – see the README.
+- **New: Mac (preview, untested).** `FlowTV.app` as an Intel build, on Apple
+  silicon through Rosetta 2. Not yet checked on a real Mac – reports very
+  welcome.
 - **Fullscreen on the right screen.** Fullscreen is now a window of its own: it
   opens on the screen FlowTV is on, moves on with “Other screen” and remembers
   the choice. The main window stays usable next to it.

@@ -2,7 +2,7 @@
 
 <img src="docs/flowtv-logo.png" alt="FlowTV – OpenWebif-IPTV" width="520">
 
-**Client for Enigma2 receivers over OpenWebif – Windows, and Linux as a preview**
+**Client for Enigma2 receivers over OpenWebif – Windows, plus Linux and Mac as previews**
 
 [Deutsch](#deutsch) · [English](#english) · [Download](../../releases/latest)
 
@@ -43,7 +43,7 @@ FlowTV 1.0 was built on WPF, Microsoft's interface technology that only exists
 on Windows. For 2.0 the whole interface was **rebuilt on Avalonia**, which runs
 on Windows, Linux and macOS from one and the same code. What stays the same:
 the functions, the look, your settings. What changes: the same FlowTV can now
-also come to **Linux** (from 2.0, as a preview) and later to the **Mac** – without
+also run on **Linux** and the **Mac** (from 2.0, both as previews) – without
 three separate programs that would drift apart.
 
 On the way, many things from everyday use got better – see the
@@ -68,7 +68,8 @@ login and then asks the box what it can do:
 ### Download and start
 
 1. Get the latest `FlowTV-<version>-win-x64.zip` from the
-   [Releases page](../../releases/latest). *(Linux: see [below](#linux-preview).)*
+   [Releases page](../../releases/latest). *(Linux and Mac: see
+   [below](#linux-preview).)*
 2. Unpack it to any folder – for example `C:\Programme\FlowTV`. **Do not run it
    from inside the ZIP.**
 3. Start `FlowTV.exe`.
@@ -151,11 +152,51 @@ same there, it is WSL's sound bridge, not FlowTV. On a real Linux PC it has not
 been tested yet, nor on the other distributions in the table. Reports are very
 welcome.
 
-### Mac
+### Mac (preview, untested)
 
-**In preparation.** A Mac version is built from the same code, but there is no
-Mac here to test it on. It will be published once at least the main functions
-have been checked on a real Mac.
+Since 2.0 there is also a Mac version: `FlowTV-<version>-osx-x64.tar.gz` on the
+[Releases page](../../releases/latest).
+
+**Honestly first: nobody has run it on a real Mac yet.** It is built from the
+same code as the Windows and Linux versions, and its parts have been checked –
+but there is no Mac here. It may not start at all. If you try it, please tell us
+how it went (see below).
+
+**What you need**
+
+- macOS 13 (Ventura) or later.
+- Intel or Apple silicon (M1–M4): it is an **Intel build**, because LibVLC for the
+  Mac only exists for Intel as a package. On Apple silicon it runs through
+  **Rosetta 2** – if that is missing, the Mac offers to install it on the first
+  start, or in Terminal: `softwareupdate --install-rosetta --agree-to-license`
+- Nothing else: VLC and .NET are inside the app.
+
+**Install and start**
+
+1. Double-click the `.tar.gz` in Finder. You get a folder with `FlowTV.app`.
+2. Drag `FlowTV.app` into **Applications**.
+3. **The first start is blocked by macOS**, because the app is not signed by
+   Apple (that costs money this project does not have). Two ways past it:
+   - In **Terminal** (always works):
+     `xattr -dr com.apple.quarantine /Applications/FlowTV.app` – then start
+     FlowTV normally.
+   - Or: double-click, cancel the warning, then **System Settings → Privacy &
+     Security**, scroll down, **Open Anyway**.
+
+   “FlowTV is damaged and can’t be opened” is the same block in other words –
+   the Terminal line helps.
+4. Allow **“find devices on your local network”** – without it FlowTV cannot
+   reach your receiver. Later, allow access to the **keychain**: FlowTV keeps the
+   key for your box password there.
+
+Settings live in `~/.config/FlowTV` (in Finder: Go → Go to Folder, Cmd+Shift+G).
+Keys work as on Windows (F, Esc, arrows, M, S …); the Cmd key is not specially
+handled yet.
+
+**Please report back** in an [issue](../../issues): your Mac model, chip and
+macOS version, what worked and what did not, and the **diagnostics export**
+(Settings → Diagnostics → Export diagnostics). If it does not start at all: the
+files in `~/.config/FlowTV/logs` and a screenshot of the error.
 
 ### What you need
 
@@ -166,6 +207,7 @@ have been checked on a real Mac.
 - No VLC: LibVLC ships as its own DLLs in the `libvlc` subfolder.
 - No Visual C++ redistributable.
 - *Linux: 64-bit (x64) and VLC from the package manager – see above.*
+- *Mac: macOS 13 or later; on Apple silicon Rosetta 2 – see above.*
 
 **On the receiver:**
 
@@ -234,7 +276,8 @@ every component are listed in
 its files are separate, replaceable libraries in the `libvlc` subfolder next to
 the program – neither statically linked nor bundled – and can be exchanged for
 another build. Sources: <https://code.videolan.org/videolan/vlc>. On Linux,
-FlowTV uses the VLC installed on the system and ships none.
+FlowTV uses the VLC installed on the system and ships none. On the Mac, LibVLC is
+the separate file `libvlc.dylib` inside `FlowTV.app/Contents/MacOS`.
 
 FlowTV ships **no channel lists, picons or programme data**. Everything you see
 comes from your own receiver.
@@ -280,8 +323,8 @@ FlowTV 1.0 war mit WPF gebaut, Microsofts Oberflächentechnik, die es nur unter
 Windows gibt. Für 2.0 ist die ganze Oberfläche **auf Avalonia neu gebaut**
 worden – das läuft unter Windows, Linux und macOS aus ein und demselben Code.
 Was bleibt: die Funktionen, das Aussehen, deine Einstellungen. Was sich ändert:
-Dasselbe FlowTV kann jetzt auch auf **Linux** (ab 2.0, als Vorschau) und später
-auf den **Mac** – ohne drei getrennte Programme, die auseinanderlaufen.
+Dasselbe FlowTV läuft jetzt auch auf **Linux** und dem **Mac** (ab 2.0, beide
+als Vorschau) – ohne drei getrennte Programme, die auseinanderlaufen.
 
 Nebenbei ist vieles aus dem Alltag besser geworden – siehe die
 [Änderungen](CHANGELOG.md).
@@ -305,7 +348,7 @@ der Anmeldung und fragt dann die Box, was sie kann:
 ### Herunterladen und starten
 
 1. Die neueste `FlowTV-<Version>-win-x64.zip` von der
-   [Releases-Seite](../../releases/latest) holen. *(Linux: siehe
+   [Releases-Seite](../../releases/latest) holen. *(Linux und Mac: siehe
    [unten](#linux-vorschau).)*
 2. In einen beliebigen Ordner **entpacken** – zum Beispiel
    `C:\Programme\FlowTV`. **Nicht aus der ZIP heraus starten.**
@@ -392,11 +435,53 @@ normale VLC tut dort dasselbe, es liegt an der Tonbrücke von WSL, nicht an
 FlowTV. Auf einem echten Linux-PC ist sie noch nicht geprüft, ebenso wenig auf
 den übrigen Distributionen der Tabelle. Rückmeldungen sind sehr willkommen.
 
-### Mac
+### Mac (Vorschau, ungetestet)
 
-**In Vorbereitung.** Eine Mac-Fassung entsteht aus demselben Code, aber hier
-steht kein Mac, auf dem sie sich prüfen ließe. Sie erscheint, sobald zumindest
-die Hauptfunktionen an einem echten Mac geprüft sind.
+Seit 2.0 gibt es auch eine Mac-Fassung: `FlowTV-<Version>-osx-x64.tar.gz` auf der
+[Releases-Seite](../../releases/latest).
+
+**Vorweg ehrlich: Auf einem echten Mac ist sie noch nie gelaufen.** Sie entsteht
+aus demselben Code wie die Windows- und die Linux-Fassung, und ihre Bestandteile
+sind geprüft – aber hier steht kein Mac. Es kann sein, dass sie gar nicht
+startet. Wer sie ausprobiert: Bitte sag, wie es gelaufen ist (siehe unten).
+
+**Was du brauchst**
+
+- macOS 13 (Ventura) oder neuer.
+- Intel oder Apple-Chip (M1–M4): Es ist ein **Intel-Build**, weil es LibVLC für
+  den Mac nur für Intel als Paket gibt. Auf Apple-Chip läuft es über
+  **Rosetta 2** – fehlt es, bietet der Mac beim ersten Start die Installation an,
+  oder im Terminal: `softwareupdate --install-rosetta --agree-to-license`
+- Sonst nichts: VLC und .NET stecken in der App.
+
+**Installieren und starten**
+
+1. Die `.tar.gz` im Finder doppelklicken. Es entsteht ein Ordner mit
+   `FlowTV.app`.
+2. `FlowTV.app` in **Programme** ziehen.
+3. **Den ersten Start blockiert macOS**, weil die App nicht bei Apple signiert
+   ist (das kostet Geld, das dieses Projekt nicht hat). Zwei Wege daran vorbei:
+   - Im **Terminal** (geht immer):
+     `xattr -dr com.apple.quarantine /Applications/FlowTV.app` – danach FlowTV
+     ganz normal starten.
+   - Oder: doppelklicken, die Warnung abbrechen, dann **Systemeinstellungen →
+     Datenschutz & Sicherheit**, nach unten scrollen, **Dennoch öffnen**.
+
+   „FlowTV ist beschädigt und kann nicht geöffnet werden" ist dieselbe Sperre in
+   anderen Worten – die Zeile im Terminal hilft.
+4. **„Geräte im lokalen Netzwerk finden"** erlauben – ohne das erreicht FlowTV
+   deinen Receiver nicht. Später den Zugriff auf den **Schlüsselbund** erlauben:
+   Dort legt FlowTV den Schlüssel für das Passwort deiner Box ab.
+
+Die Einstellungen liegen unter `~/.config/FlowTV` (im Finder: Gehe zu → Gehe zum
+Ordner, Cmd+Shift+G). Die Tasten sind wie unter Windows (F, Esc, Pfeile, M, S …);
+die Cmd-Taste ist noch nicht besonders berücksichtigt.
+
+**Bitte melde dich** in einem [Issue](../../issues): Mac-Modell, Chip und
+macOS-Version, was ging und was nicht, und den **Diagnose-Export**
+(Einstellungen → Diagnose → Diagnosedaten exportieren). Startet FlowTV gar
+nicht: die Dateien in `~/.config/FlowTV/logs` und ein Bildschirmfoto der
+Meldung.
 
 ### Was du brauchst
 
@@ -407,6 +492,7 @@ die Hauptfunktionen an einem echten Mac geprüft sind.
 - Kein VLC: LibVLC liegt als eigene DLL-Sammlung im Unterordner `libvlc`.
 - Kein Visual C++ Redistributable.
 - *Linux: 64 Bit (x64) und VLC aus der Paketverwaltung – siehe oben.*
+- *Mac: macOS 13 oder neuer; auf Apple-Chip Rosetta 2 – siehe oben.*
 
 **Auf der Box:**
 
@@ -477,7 +563,8 @@ LGPL-2.1-or-later** verwendet: Die Dateien liegen als eigene, austauschbare
 Bibliotheken im Unterordner `libvlc` neben dem Programm – weder statisch
 eingebunden noch zusammengepackt – und lassen sich gegen eine andere Version
 tauschen. Quelltexte: <https://code.videolan.org/videolan/vlc>. Unter Linux nutzt
-FlowTV das auf dem System installierte VLC und liefert keines mit.
+FlowTV das auf dem System installierte VLC und liefert keines mit. Auf dem Mac
+ist LibVLC die eigene Datei `libvlc.dylib` in `FlowTV.app/Contents/MacOS`.
 
 FlowTV liefert **keine Senderlisten, Picons oder Programmdaten** mit. Alles, was
 zu sehen ist, kommt vom Receiver des Nutzers.
