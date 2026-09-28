@@ -95,7 +95,9 @@ it.
 
 Since 2.1, Windows only takes this long on the very first start after
 unpacking: FlowTV then writes an index of the plugins, and later starts – even
-right after booting the PC – are quick.
+right after booting the PC – are quick. Since 2.1.1 a small “FlowTV is starting …”
+window shows up during that first start, and starting FlowTV a second time
+just brings the open window to the front – it only ever runs once.
 
 **Updating:** unpack the new ZIP into a new folder and start `FlowTV.exe`.
 Settings, profiles, favourites and key bindings live in `%AppData%\FlowTV` and
@@ -394,7 +396,9 @@ das ist deine Entscheidung, und ohne funktioniert das Programm genauso.
 
 Seit 2.1 dauert das unter Windows nur noch beim allerersten Start nach dem
 Entpacken so lange: FlowTV legt dann ein Verzeichnis der Plugins an, und alle
-weiteren Starts – auch direkt nach dem Hochfahren des PCs – gehen schnell.
+weiteren Starts – auch direkt nach dem Hochfahren des PCs – gehen schnell. Seit 2.1.1 zeigt dabei ein kleines Fenster
+„FlowTV startet …“, dass es läuft, und ein zweiter Start holt nur das offene
+Fenster nach vorn – FlowTV läuft immer nur einmal.
 
 **Update:** Die neue ZIP in einen neuen Ordner entpacken und `FlowTV.exe`
 starten. Einstellungen, Profile, Favoriten und Tastenbelegung liegen unter

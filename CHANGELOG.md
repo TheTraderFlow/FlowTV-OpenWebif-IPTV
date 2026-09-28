@@ -3,6 +3,29 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.1.1
+
+Sicherer Start: FlowTV läuft nur noch einmal. /
+Safer start: FlowTV only runs once.
+
+**Deutsch**
+
+- **FlowTV läuft nur noch einmal.** Ein zweiter Start öffnet kein zweites
+  Fenster mehr, sondern holt das offene nach vorn. Zwei gleichzeitige FlowTV
+  konnten sich gegenseitig Einstellungen überschreiben.
+- **Beim ersten Start nach dem Entpacken** zeigt FlowTV sofort ein kleines
+  Fenster „FlowTV startet …“. Windows prüft dann alle neuen Dateien einmal, und
+  bis zum Hauptfenster kann es etwas dauern – so ist klar, dass es läuft.
+
+**English**
+
+- **FlowTV only runs once.** Starting it again no longer opens a second window
+  but brings the open one to the front. Two FlowTV at the same time could
+  overwrite each other's settings.
+- **On the first start after unpacking** FlowTV shows a small “FlowTV is
+  starting …” window right away. Windows checks all new files once, and the
+  main window can take a while – now it is clear that it is running.
+
 ## 2.1.0
 
 Hinweis auf neue Versionen, schnellerer Start, aufgeräumtes Vollbild. /
