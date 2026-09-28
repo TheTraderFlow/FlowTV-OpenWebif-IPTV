@@ -93,9 +93,28 @@ If it bothers you, adding the FlowTV folder to the Defender exclusions makes it
 quick every time – that is your decision, and the program works fine without
 it.
 
-**Updating from 1.0:** unpack the new ZIP into a new folder and start
-`FlowTV.exe`. Settings, profiles, favourites and key bindings live in
-`%AppData%\FlowTV` and carry over. Delete the old folder afterwards.
+Since 2.1, Windows only takes this long on the very first start after
+unpacking: FlowTV then writes an index of the plugins, and later starts – even
+right after booting the PC – are quick.
+
+**Updating:** unpack the new ZIP into a new folder and start `FlowTV.exe`.
+Settings, profiles, favourites and key bindings live in `%AppData%\FlowTV` and
+carry over. Delete the old folder afterwards.
+
+### New versions
+
+From 2.1 on, FlowTV checks **once a day** on GitHub whether there is a newer
+version **for your system**. If there is, the **About** menu entry gets a
+coloured dot, and the About page has a button to the release page. There is no
+pop-up and nothing is downloaded automatically – you download and unpack it
+yourself. GitHub sees your IP address when FlowTV asks; nothing else is sent.
+You can switch it off under *Settings → User interface → Check for new versions*.
+
+**Not every release has packages for all three systems.** If only Windows
+changed, a release contains only the Windows ZIP – Linux and Mac users have
+nothing to do and FlowTV does not bother them. The latest package for your
+system is then on an earlier release. Version 2.0.0 cannot check yet; from 2.0
+please update to 2.1 by hand once.
 
 ### Linux (preview)
 
@@ -373,14 +392,33 @@ bedienen; nur das Bild lässt auf sich warten.
 Wen es stört, der nimmt den FlowTV-Ordner in die Ausnahmen des Defenders auf –
 das ist deine Entscheidung, und ohne funktioniert das Programm genauso.
 
-**Update von 1.0:** Die neue ZIP in einen neuen Ordner entpacken und
-`FlowTV.exe` starten. Einstellungen, Profile, Favoriten und Tastenbelegung
-liegen unter `%AppData%\FlowTV` und werden übernommen. Den alten Ordner danach
-löschen.
+Seit 2.1 dauert das unter Windows nur noch beim allerersten Start nach dem
+Entpacken so lange: FlowTV legt dann ein Verzeichnis der Plugins an, und alle
+weiteren Starts – auch direkt nach dem Hochfahren des PCs – gehen schnell.
+
+**Update:** Die neue ZIP in einen neuen Ordner entpacken und `FlowTV.exe`
+starten. Einstellungen, Profile, Favoriten und Tastenbelegung liegen unter
+`%AppData%\FlowTV` und werden übernommen. Den alten Ordner danach löschen.
+
+### Neue Versionen
+
+Ab 2.1 sieht FlowTV **einmal am Tag** bei GitHub nach, ob es eine neuere
+Version **für dein System** gibt. Wenn ja, bekommt der Menüpunkt **Über** einen
+farbigen Punkt, und auf der Seite führt ein Knopf zur Release-Seite. Es gibt kein
+Popup, und heruntergeladen wird nichts von selbst – das machst du selbst.
+GitHub sieht bei der Nachfrage deine IP-Adresse; sonst wird nichts übertragen.
+Abschalten lässt es sich unter *Einstellungen → Oberfläche → Nach neuer Version
+suchen*.
+
+**Nicht jedes Release enthält Pakete für alle drei Systeme.** Hat sich nur
+Windows geändert, liegt im Release nur die Windows-ZIP – Linux und Mac müssen
+nichts tun, und FlowTV meldet dort auch nichts. Das neueste Paket für dein
+System liegt dann bei einem früheren Release. Version 2.0.0 kann noch nicht
+nachsehen; von 2.0 bitte einmal von Hand auf 2.1 aktualisieren.
 
 ### Linux (Vorschau)
 
-Seit 2.0 gibt es eine Linux-Fassung: `FlowTV-<Version>-linux-x64.tar.gz` auf der
+Seit 2.0 gibt es eine Linux-Version: `FlowTV-<Version>-linux-x64.tar.gz` auf der
 [Releases-Seite](../../releases/latest). Gebraucht wird ein 64-Bit-PC (x64) mit
 einem gewöhnlichen Desktop (X11, oder Wayland mit XWayland – bei aktuellen
 Distributionen der Normalfall).
@@ -425,7 +463,7 @@ Icon=/home/DEIN-NAME/FlowTV-<Version>-linux-x64/flowtv.png
 Categories=AudioVideo;Video;TV;
 ```
 
-Die Einstellungen liegen unter `~/.config/FlowTV`. **Update:** die neue Fassung
+Die Einstellungen liegen unter `~/.config/FlowTV`. **Update:** die neue Version
 entpacken und starten – die Einstellungen bleiben, wo sie sind.
 
 **Ehrlich gesagt: eine Vorschau.** Geprüft wurde sie unter **Ubuntu 24.04 in
@@ -437,11 +475,11 @@ den übrigen Distributionen der Tabelle. Rückmeldungen sind sehr willkommen.
 
 ### Mac (Vorschau, ungetestet)
 
-Seit 2.0 gibt es auch eine Mac-Fassung: `FlowTV-<Version>-osx-x64.tar.gz` auf der
+Seit 2.0 gibt es auch eine Mac-Version: `FlowTV-<Version>-osx-x64.tar.gz` auf der
 [Releases-Seite](../../releases/latest).
 
 **Vorweg ehrlich: Auf einem echten Mac ist sie noch nie gelaufen.** Sie entsteht
-aus demselben Code wie die Windows- und die Linux-Fassung, und ihre Bestandteile
+aus demselben Code wie die Windows- und die Linux-Version, und ihre Bestandteile
 sind geprüft – aber hier steht kein Mac. Es kann sein, dass sie gar nicht
 startet. Wer sie ausprobiert: Bitte sag, wie es gelaufen ist (siehe unten).
 

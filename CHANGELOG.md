@@ -3,6 +3,69 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.1.0
+
+Hinweis auf neue Versionen, schnellerer Start, aufgeräumtes Vollbild. /
+Notice of new versions, faster start, a tidier fullscreen bar.
+
+**Deutsch**
+
+- **Neu: Hinweis auf neue Versionen.** FlowTV sieht einmal am Tag bei GitHub
+  nach, ob es eine neuere Version für dein System gibt. Dann bekommt „Über“
+  einen farbigen Punkt, und dort führt ein Knopf zur Release-Seite. Kein Popup,
+  kein automatischer Download; abschaltbar unter Einstellungen → Oberfläche.
+- **Neu: Versionsgeschichte** auf der Seite „Über“, zum Aufklappen.
+- **Neu: Eigener Timer aus der Senderliste.** Rechtsklick auf einen Sender →
+  Timer → „Eigener Timer …“ – Zeiten frei wählbar, der Sender ist schon
+  ausgewählt.
+- **Schnellerer Start.** Die Senderliste ist sofort da. Solange die Wiedergabe
+  vorbereitet wird, steht das im Bild, und ein gewählter Sender startet danach
+  von selbst. Unter Windows entfällt ab dem zweiten Start das lange Warten nach
+  dem Hochfahren des PCs.
+- **Aufnahmen wecken Box und Fernseher nicht mehr.** Je nach Box-Einstellung
+  holte ein Aufnahme-Timer die Box aus dem Standby – und über HDMI-CEC den
+  Fernseher gleich mit. FlowTV sagt der Box jetzt „nur aufnehmen“; einstellbar
+  unter Einstellungen → Aufnahmen.
+- **Vollbild: Bildschirm aus einer Liste wählen** (Bildschirm 1, 2 … mit
+  Auflösung) statt reihum weiterzuschieben.
+- **Vollbild: Tonspur und Untertitel in einem Knopf** mit Liste zum Anklicken.
+- **Verständliche Tonspuren und Untertitel:** „Deutsch“, „Französisch“,
+  „Deutsch · Hörfassung (Audiodeskription)“, „Deutsch · Dolby Digital“,
+  „Deutsch · für Hörgeschädigte“ statt „Track 1 - [German]“. Die gewählte
+  Tonspur wird je Sender wieder gemerkt. Videotext-Untertitel stehen nicht
+  mehr zur Wahl – nur noch die gut lesbaren DVB-Untertitel.
+- **Schmale Fenster:** Der Hinweis „Aufnahme läuft …“ und die Leisten bleiben
+  lesbar – die Knöpfe rücken darunter oder zeigen nur ihr Symbol. Die
+  Senderliste behält ihren Platz, die Bouquet-Spalte wird schmaler.
+
+**English**
+
+- **New: notice of new versions.** Once a day FlowTV checks GitHub for a newer
+  version for your system. If there is one, “About” gets a coloured dot and a
+  button to the release page. No pop-up, no automatic download; can be turned
+  off under Settings → User interface.
+- **New: version history** on the “About” page, to fold out.
+- **New: custom timer from the channel list.** Right-click a channel → Timer →
+  “Custom timer …” – free start and end, the channel already chosen.
+- **Faster start.** The channel list is there at once. While playback is being
+  prepared the picture says so, and a channel chosen meanwhile starts by itself.
+  On Windows the long wait after booting the PC is gone from the second start on.
+- **Recordings no longer wake the box and the TV.** Depending on a box setting,
+  a recording timer brought the box out of standby – and the TV along with it
+  over HDMI-CEC. FlowTV now tells the box “record only”; adjustable under
+  Settings → Recordings.
+- **Fullscreen: choose the screen from a list** (screen 1, 2 … with resolution)
+  instead of moving it on one by one.
+- **Fullscreen: audio track and subtitles in one button** with a list.
+- **Readable audio tracks and subtitles:** “German”, “French”, “German ·
+  Audio description”, “German · Dolby Digital”, “German · for the hard of
+  hearing” instead of “Track 1 - [German]”. The chosen audio track is
+  remembered per channel again. Teletext subtitles are no longer offered –
+  only the clearly readable DVB subtitles.
+- **Narrow windows:** the “Recording …” notice and the bars stay readable – the
+  buttons move below or show only their icon. The channel list keeps its
+  room, the bouquet column gets narrower.
+
 ## 2.0.0
 
 Neu gebaute Oberfläche und viele Verbesserungen aus dem Alltag. /
