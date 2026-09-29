@@ -2,7 +2,7 @@ FlowTV - OpenWebif-IPTV
 Hinweise zu Bestandteilen Dritter / Third-party notices
 
 Diese Anwendung enthaelt Software Dritter. Nachfolgend stehen Name,
-Fassung, Lizenz und Projektseite jedes Bestandteils. Die vollstaendigen
+Version, Lizenz und Projektseite jedes Bestandteils. Die vollstaendigen
 Lizenztexte liegen im Ordner "licenses" neben dieser Datei.
 
 This application contains third-party software. Name, version, license and
@@ -301,7 +301,7 @@ LibVLC (LGPL-2.1-or-later)
 
 LibVLC liegt als eigene, austauschbare DLL-Sammlung im Unterordner
 "libvlc" neben der Anwendung und ist weder statisch eingebunden noch
-mit ihr zusammengepackt. Wer eine andere Fassung von LibVLC benutzen
+mit ihr zusammengepackt. Wer eine andere Version von LibVLC benutzen
 moechte, kann die Dateien dort austauschen. Die Quelltexte sind unter
 https://code.videolan.org/videolan/vlc erhaeltlich.
 

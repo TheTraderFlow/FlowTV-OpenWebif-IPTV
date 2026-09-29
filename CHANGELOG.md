@@ -3,6 +3,68 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.2.0
+
+Was läuft auf der Box – und eine Rückfrage, bevor FlowTV den Fernseher stört. /
+What's on the box – and a question before FlowTV disturbs the TV.
+
+**Deutsch**
+
+- **Neu: Leiste „Was läuft auf der Box“** unten im Fenster, auf jeder Seite:
+  was der Fernseher gerade zeigt (Sender mit Sendung, oder welche Aufnahme
+  abgespielt wird), welche Aufnahmen laufen und wer Streams bekommt – mit
+  Tuner, wenn die Box ihn nennt. Die Zeichen pulsieren weiß-rot, damit man sie
+  bemerkt. Abschaltbar unter Einstellungen → Oberfläche.
+- **Neu: Rückfrage vor dem Umschalten.** Läuft am Fernseher gerade etwas, das
+  FlowTV nicht selbst eingestellt hat – etwa eine Aufnahme, die jemand
+  ansieht –, fragt FlowTV, bevor es die Box umschaltet. „Abbrechen“ lässt den
+  Fernseher in Ruhe. Abschaltbar unter Einstellungen → Erst umschalten.
+- **Boxen mit mehreren Tunern:** Freie Tuner werden je Empfangsart gezählt
+  (Sat, Kabel, Antenne; ein Kombi-Tuner nur für eines zugleich), und vor dem
+  Ansehen fragt FlowTV die Box, welche Tuner Fernsehbild, Aufnahmen und Streams
+  gerade belegen. Gilt auch für den Aufnahmeschutz und die Timer-Konflikte.
+  **An Boxen mit mehreren Sat-Tunern noch ungetestet** – Rückmeldungen erwünscht.
+- **Neu: Bild bei Aufnahmen.** Schickt die Box zu einer Aufnahme keinen
+  Sendernamen, steht statt „?“ ein Platzhalterbild davor. Wer mag, nimmt es für
+  alle Aufnahmen (Einstellungen → Aufnahmen → „Bild bei Aufnahmen“).
+- **Nach neuen Versionen wird jetzt bei jedem Start gefragt** und, solange
+  FlowTV läuft, um 8, 12 und 18 Uhr. Der Punkt an „Über“ pulsiert gelb-orange.
+- **„Unterordner einbeziehen“ findet Aufnahmen in allen Unterordnern**, egal
+  wie tief. Die Einstellung „Maximale Tiefe“ entfällt.
+- **Einstellungen aufgeräumt:** „Erkannte Box-Fähigkeiten“ steht unter
+  „Verbindung“, „Zusätzliche Pfade“ unter „Aufnahmepfad auf der Box“.
+- **Windows: Das Fenster „FlowTV startet …“ kommt beim ersten Start sofort**
+  (nach unter einer Sekunde statt erst kurz vor dem Hauptfenster).
+
+**English**
+
+- **New: “What's on the box” bar** at the bottom of the window, on every page:
+  what the box is showing on the TV (channel and programme, or which recording
+  is playing), which recordings are running and who gets streams – with the
+  tuner when the box names it. The symbols pulse white and red so you notice
+  them. Can be switched off under Settings → User interface.
+- **New: a question before switching.** If something the TV is showing was not
+  set by FlowTV – say, a recording somebody is watching – FlowTV asks before it
+  switches the box. “Cancel” leaves the TV alone. Can be switched off under
+  Settings → Switch first.
+- **Boxes with several tuners:** free tuners are counted per reception type
+  (satellite, cable, terrestrial; a combo tuner only for one at a time), and
+  before watching FlowTV asks the box which tuners are busy with the TV picture,
+  recordings and streams. This also applies to the recording protection and the
+  timer conflicts. **Not yet tested on boxes with several satellite tuners** –
+  feedback welcome.
+- **New: image for recordings.** If the box sends no channel name for a
+  recording, a placeholder image appears instead of “?”. You can also use it for
+  all recordings (Settings → Recordings → “Image for recordings”).
+- **New versions are now checked at every start** and, while FlowTV is running,
+  at 8 am, 12 pm and 6 pm. The dot at “About” pulses yellow and orange.
+- **“Include subfolders” finds recordings in all subfolders**, however deep.
+  The “Maximum depth” setting is gone.
+- **Settings tidied up:** “Detected box capabilities” sits under “Connection”,
+  “Additional paths” under “Recording path on the box”.
+- **Windows: the “FlowTV is starting …” window appears right away** on the
+  first start (in under a second instead of just before the main window).
+
 ## 2.1.1
 
 Sicherer Start: FlowTV läuft nur noch einmal. /

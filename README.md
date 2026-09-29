@@ -26,6 +26,9 @@ screen while switching channels.
   off.
 - **Live TV** through LibVLC, with the standard port and the stream relay port
   for encrypted channels; if one does not answer, the other is used.
+- **What's on the box**: a bar at the bottom shows what the TV is showing, which
+  recordings are running and who gets streams – and FlowTV asks before it would
+  switch the box away from something somebody is watching.
 - **Programme guide** with a grid, a detail card and a search over all channels.
 - **Timers**: record or just switch over at the start of a programme, with tuner
   conflict detection – it will not start something that would break a running
@@ -105,8 +108,9 @@ carry over. Delete the old folder afterwards.
 
 ### New versions
 
-From 2.1 on, FlowTV checks **once a day** on GitHub whether there is a newer
-version **for your system**. If there is, the **About** menu entry gets a
+FlowTV checks GitHub **at every start** and, while it is running, **at 8 am,
+12 pm and 6 pm** whether there is a newer version **for your system** (since 2.2;
+2.1 checked once a day). If there is, the **About** menu entry gets a
 coloured dot, and the About page has a button to the release page. There is no
 pop-up and nothing is downloaded automatically – you download and unpack it
 yourself. GitHub sees your IP address when FlowTV asks; nothing else is sent.
@@ -256,7 +260,9 @@ on a GigaBlue UHD TRIO 4K with openATV 7.6 and OpenWebif 2.4.**
   sits exactly there: counting tuners per reception type, comparing
   transponders, and protecting a running recording. That logic is covered by
   automated tests and written defensively, but nobody has watched it run on real
-  hardware with more than one tuner.
+  hardware with more than one tuner. Since 2.2 FlowTV also asks the box which
+  tuners are busy with the TV picture, recordings and streams, and counts per
+  reception type – reports from boxes with several tuners are especially welcome.
 - **Other images** (VTi, OpenPLi, PurE2 …) are untested. The app parses
   defensively and greys out what a box cannot do – that is what it is built for,
   but it is not proven.
@@ -327,6 +333,9 @@ und beim Umschalten gibt es nie ein schwarzes Bild.
   gesehen" liegen auf dem PC und sind auch da, wenn die Box aus ist.
 - **Live-TV** über LibVLC, mit Standardport und Stream-Relay-Port für
   verschlüsselte Sender; antwortet der eine nicht, wird der andere genommen.
+- **Was läuft auf der Box**: Eine Leiste unten zeigt, was der Fernseher gerade
+  zeigt, welche Aufnahmen laufen und wer Streams bekommt – und FlowTV fragt, bevor
+  es die Box von etwas wegschalten würde, das gerade jemand ansieht.
 - **TV-Guide** mit Raster, Detailkarte und Suche über alle Sender.
 - **Timer**: aufnehmen oder zur Sendezeit nur umschalten, mit Erkennung von
   Tuner-Konflikten – es wird nichts gestartet, was eine laufende Aufnahme
@@ -406,8 +415,9 @@ starten. Einstellungen, Profile, Favoriten und Tastenbelegung liegen unter
 
 ### Neue Versionen
 
-Ab 2.1 sieht FlowTV **einmal am Tag** bei GitHub nach, ob es eine neuere
-Version **für dein System** gibt. Wenn ja, bekommt der Menüpunkt **Über** einen
+FlowTV sieht **bei jedem Start** und, solange es läuft, **um 8, 12 und 18 Uhr**
+bei GitHub nach, ob es eine neuere Version **für dein System** gibt (seit 2.2;
+2.1 fragte einmal am Tag). Wenn ja, bekommt der Menüpunkt **Über** einen
 farbigen Punkt, und auf der Seite führt ein Knopf zur Release-Seite. Es gibt kein
 Popup, und heruntergeladen wird nichts von selbst – das machst du selbst.
 GitHub sieht bei der Nachfrage deine IP-Adresse; sonst wird nichts übertragen.
@@ -562,7 +572,10 @@ geprüft worden.**
   sitzt der empfindlichste Teil: die Tunerzählung nach Empfangsart, der
   Transpondervergleich und der Schutz einer laufenden Aufnahme. Diese Logik ist
   mit automatischen Tests abgedeckt und defensiv gebaut, aber an echter Hardware
-  mit mehreren Tunern hat sie niemand laufen sehen.
+  mit mehreren Tunern hat sie niemand laufen sehen. Seit 2.2 fragt FlowTV die Box
+  zusätzlich, welche Tuner Fernsehbild, Aufnahmen und Streams gerade belegen, und
+  zählt je Empfangsart – Rückmeldungen von Boxen mit mehreren Tunern sind
+  besonders willkommen.
 - **Andere Images** (VTi, OpenPLi, PurE2 …) sind ungeprüft. Die App parst
   defensiv und graut aus, was eine Box nicht kann – dafür ist sie gebaut,
   bewiesen ist es nicht.
