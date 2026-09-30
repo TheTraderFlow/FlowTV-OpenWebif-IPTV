@@ -29,6 +29,9 @@ screen while switching channels.
 - **What's on the box**: a bar at the bottom shows what the TV is showing, which
   recordings are running and who gets streams – and FlowTV asks before it would
   switch the box away from something somebody is watching.
+- **Several boxes**: switch between them at the bottom left, and if one does not
+  answer, FlowTV can offer another one.
+- **Radio**: radio bouquets below the TV bouquets, one switch away.
 - **Programme guide** with a grid, a detail card and a search over all channels.
 - **Timers**: record or just switch over at the start of a programme, with tuner
   conflict detection – it will not start something that would break a running
@@ -106,6 +109,11 @@ just brings the open window to the front – it only ever runs once.
 Settings, profiles, favourites and key bindings live in `%AppData%\FlowTV` and
 carry over. Delete the old folder afterwards.
 
+**If your data is next to the program** (a folder `FlowTV-Data` or a file
+`FlowTV-Data.txt` beside `FlowTV.exe`, see *First start*): copy that folder or
+file into the new folder before the first start – or unpack the new version
+over the old one.
+
 ### New versions
 
 FlowTV checks GitHub **at every start** and, while it is running, **at 8 am,
@@ -167,8 +175,10 @@ Icon=/home/YOUR-NAME/FlowTV-<version>-linux-x64/flowtv.png
 Categories=AudioVideo;Video;TV;
 ```
 
-Settings live in `~/.config/FlowTV`. **Updating:** unpack the new version and
-start it – the settings stay where they are.
+Settings live in `~/.config/FlowTV`, or in `FlowTV-Data` next to the program if
+you chose that on the first start. **Updating:** unpack the new version and
+start it – the settings stay where they are; with `FlowTV-Data` next to the
+program, take that folder along.
 
 **Honestly: it is a preview.** It was tested on **Ubuntu 24.04 in WSL2** (the
 Linux inside Windows) against the same box: setup, channel list, picture,
@@ -247,7 +257,15 @@ working.
 
 ### First start
 
-A short wizard searches the local network for boxes, asks for the login and
+On the very first start (Windows and Linux, since 2.3) FlowTV asks where to keep
+its data: **next to the program** in a folder `FlowTV-Data` (recommended –
+everything stays together), **in the user profile** or in **a folder of your
+own**. If FlowTV may not write to its own folder (e.g. under “Program Files”),
+only the user profile is offered. Where the data lives is shown later under
+Settings → Data on this PC. Passwords are tied to the Windows user: another user
+or PC enters them once more.
+
+A short wizard then searches the local network for boxes, asks for the login and
 detects what your box can do. Everything it finds can be overridden by hand, and
 every value shows where it came from: default, detected or set by you.
 
@@ -336,6 +354,9 @@ und beim Umschalten gibt es nie ein schwarzes Bild.
 - **Was läuft auf der Box**: Eine Leiste unten zeigt, was der Fernseher gerade
   zeigt, welche Aufnahmen laufen und wer Streams bekommt – und FlowTV fragt, bevor
   es die Box von etwas wegschalten würde, das gerade jemand ansieht.
+- **Mehrere Boxen**: unten links zwischen ihnen wechseln, und antwortet eine
+  nicht, kann FlowTV eine andere anbieten.
+- **Radio**: Radio-Bouquets unter den TV-Bouquets, ein Schalter genügt.
 - **TV-Guide** mit Raster, Detailkarte und Suche über alle Sender.
 - **Timer**: aufnehmen oder zur Sendezeit nur umschalten, mit Erkennung von
   Tuner-Konflikten – es wird nichts gestartet, was eine laufende Aufnahme
@@ -413,6 +434,11 @@ Fenster nach vorn – FlowTV läuft immer nur einmal.
 starten. Einstellungen, Profile, Favoriten und Tastenbelegung liegen unter
 `%AppData%\FlowTV` und werden übernommen. Den alten Ordner danach löschen.
 
+**Liegen deine Daten neben dem Programm** (ein Ordner `FlowTV-Data` oder eine
+Datei `FlowTV-Data.txt` neben `FlowTV.exe`, siehe *Der erste Start*): diesen
+Ordner bzw. diese Datei vor dem ersten Start in den neuen Ordner kopieren – oder
+die neue Version einfach über die alte entpacken.
+
 ### Neue Versionen
 
 FlowTV sieht **bei jedem Start** und, solange es läuft, **um 8, 12 und 18 Uhr**
@@ -477,8 +503,10 @@ Icon=/home/DEIN-NAME/FlowTV-<Version>-linux-x64/flowtv.png
 Categories=AudioVideo;Video;TV;
 ```
 
-Die Einstellungen liegen unter `~/.config/FlowTV`. **Update:** die neue Version
-entpacken und starten – die Einstellungen bleiben, wo sie sind.
+Die Einstellungen liegen unter `~/.config/FlowTV` oder, wenn du das beim ersten
+Start gewählt hast, in `FlowTV-Data` neben dem Programm. **Update:** die neue
+Version entpacken und starten – die Einstellungen bleiben, wo sie sind; liegt
+`FlowTV-Data` neben dem Programm, den Ordner mitnehmen.
 
 **Ehrlich gesagt: eine Vorschau.** Geprüft wurde sie unter **Ubuntu 24.04 in
 WSL2** (dem Linux in Windows) an derselben Box: Einrichtung, Senderliste, Bild,
@@ -558,9 +586,18 @@ Was fehlt, bleibt ausgegraut und erklärt sich – der Rest läuft weiter.
 
 ### Der erste Start
 
-Ein kurzer Assistent sucht im Netzwerk nach Boxen, fragt nach der Anmeldung und
-erkennt, was deine Box kann. Alles Erkannte lässt sich von Hand überschreiben,
-und bei jedem Wert steht, woher er kommt: Standard, erkannt oder selbst gesetzt.
+Beim allerersten Start (Windows und Linux, seit 2.3) fragt FlowTV, wo es seine
+Daten ablegen soll: **neben dem Programm** im Ordner `FlowTV-Data` (empfohlen –
+alles bleibt beisammen), **unter dem Benutzerprofil** oder in einem **eigenen
+Ordner**. Darf FlowTV nicht in seinen eigenen Ordner schreiben (etwa unter
+„Programme“), steht nur das Benutzerprofil zur Wahl. Wo die Daten liegen, steht
+später unter Einstellungen → Daten auf dem PC. Passwörter sind an den
+Windows-Benutzer gebunden: Ein anderer Benutzer oder PC gibt sie einmal neu ein.
+
+Danach sucht ein kurzer Assistent im Netzwerk nach Boxen, fragt nach der
+Anmeldung und erkennt, was deine Box kann. Alles Erkannte lässt sich von Hand
+überschreiben, und bei jedem Wert steht, woher er kommt: Standard, erkannt oder
+selbst gesetzt.
 
 ### Geprüft nur an einer Box – bitte lesen
 

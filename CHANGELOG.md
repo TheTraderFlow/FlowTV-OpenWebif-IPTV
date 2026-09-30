@@ -3,6 +3,76 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.3.0
+
+Mehrere Boxen, Daten wohin du willst, Radio – und ein besserer TV-Guide. /
+Several boxes, data wherever you like, radio – and a better TV guide.
+
+**Deutsch**
+
+- **Neu: Box wechseln unten links.** Mit mehreren Boxen (Profilen) ist die
+  Zeile mit Name und Adresse unten links ein Knopf: Klick, Box wählen, fertig.
+  Senderliste, TV-Guide, Timer und Aufnahmen kommen dann von der neuen Box.
+- **Neu: Auf eine andere Box ausweichen.** Je Box lassen sich Ersatz-Boxen
+  anhaken (Einstellungen → „Ausweichen auf andere Box“, ab Werk aus).
+  Antwortet die Box nicht – etwa im Deep-Standby – oder belegen Aufnahmen alle
+  Tuner, bietet FlowTV die erste erreichbare Ersatz-Box an. Ab Werk mit
+  Rückfrage.
+- **Neu: Profile umbenennen** – Zeile „Profilname“ ganz oben unter
+  Einstellungen → Verbindung.
+- **Neu: Daten neben dem Programm (portabel).** Liegt neben FlowTV ein Ordner
+  `FlowTV-Data`, speichert FlowTV alles dort statt unter dem Benutzerprofil.
+  Einstellungen → Daten auf dem PC → „Daten neben das Programm verlegen“ zieht
+  um. Windows und Linux.
+- **Neu: Beim allerersten Start fragt FlowTV, wo die Daten liegen sollen** –
+  neben dem Programm (empfohlen), unter dem Benutzerprofil oder in einem
+  eigenen Ordner. Wer FlowTV schon benutzt, wird nicht gefragt. Windows und
+  Linux.
+- **Neu: Schalter „Radio“ neben „Bouquets“** – Radio-Bouquets direkt in der
+  Senderliste ein- und ausblenden, unter den TV-Bouquets mit einer feinen Linie.
+- **TV-Guide füllt die Breite** und zeigt auf breiten Bildschirmen mehr Zeit;
+  neben dem Blättern gibt es jetzt eine Auswahl „Heute, Morgen, …“.
+- **Aufnahmen: Papierkorb und Systemordner ausblenden** (`trashcan`,
+  `$RECYCLE.BIN`, `lost+found`), ab Werk an.
+- **Behoben: Radiosender blieben bei „Der Sender wird geladen …“ stehen**, obwohl
+  Musik lief, und FlowTV versuchte einen anderen Port. Jetzt zählt der Ton; im
+  Player stehen Picon, Name und „Radio – nur Ton“.
+- **Behoben: Nach dem ersten Einrichten stand „Noch keine Box eingerichtet.“**
+  – die Senderliste kommt jetzt von selbst.
+- **Behoben: Nach einem Boxwechsel blieben Senderliste und TV-Guide der alten
+  Box stehen.**
+
+**English**
+
+- **New: switch boxes at the bottom left.** With several boxes (profiles) the
+  line with name and address at the bottom left is a button: click, pick a box,
+  done. Channel list, TV guide, timers and recordings then come from the new box.
+- **New: fall back to another box.** Per box you can tick spare boxes
+  (Settings → “Fall back to another box”, off by default). If the box does not
+  answer – say, in deep standby – or recordings use all tuners, FlowTV offers
+  the first spare box that answers. Asks first by default.
+- **New: rename profiles** – “Profile name” at the top of Settings → Connection.
+- **New: data next to the program (portable).** If there is a folder
+  `FlowTV-Data` next to FlowTV, everything is stored there instead of in the
+  user profile. Settings → Data on this PC → “Move data next to the program”
+  moves it. Windows and Linux.
+- **New: on the very first start FlowTV asks where to keep its data** – next to
+  the program (recommended), in the user profile or in a folder of your own.
+  Existing users are not asked. Windows and Linux.
+- **New: “Radio” switch next to “Bouquets”** – show or hide radio bouquets right
+  in the channel list, below the TV bouquets behind a thin line.
+- **The TV guide fills the width** and shows more time on wide screens; next to
+  the arrows there is now a “Today, Tomorrow, …” choice.
+- **Recordings: hide recycle bin and system folders** (`trashcan`,
+  `$RECYCLE.BIN`, `lost+found`), on by default.
+- **Fixed: radio channels stayed at “Loading the channel …”** although music was
+  playing, and FlowTV tried another port. Now the sound counts; the player shows
+  picon, name and “Radio – audio only”.
+- **Fixed: after the first setup it said “No box set up yet.”** – the channel
+  list now loads by itself.
+- **Fixed: after switching boxes, channel list and TV guide of the old box
+  stayed.**
+
 ## 2.2.0
 
 Was läuft auf der Box – und eine Rückfrage, bevor FlowTV den Fernseher stört. /
