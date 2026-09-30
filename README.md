@@ -71,6 +71,17 @@ login and then asks the box what it can do:
 
 *The pictures show the English interface; the app speaks German as well.*
 
+### New in 2.2 and 2.3
+
+The red frames mark what is new. These pictures show the German interface.
+
+|  |  |
+|---|---|
+| ![Live TV with radio switch, box selection and status bar](docs/08-live-tv-radio.png) | ![Live TV with tuner display in the status bar](docs/09-live-tv-tuner.png) |
+| **Radio switch** above the bouquets, radio bouquets below the TV ones; **box selection** at the bottom left; the **status bar** shows that the box is in standby | The status bar also shows **which tuner** delivers the stream to this PC |
+| ![Failover to another box](docs/10-failover.png) | ![Where FlowTV keeps its data](docs/07-data-location.png) |
+| **Failover**: if the box does not answer, FlowTV can switch to another one – you choose which boxes and whether it asks first | **First start**: FlowTV asks where to keep its data – next to the program (portable), in the user profile or in a folder of your choice |
+
 ### Download and start
 
 1. Get the latest `FlowTV-<version>-win-x64.zip` from the
@@ -395,6 +406,17 @@ der Anmeldung und fragt dann die Box, was sie kann:
 ![Einrichtungsassistent – Erkennung](docs/06-setup-wizard.png)
 
 *Die Bilder zeigen die englische Oberfläche; die App spricht genauso Deutsch.*
+
+### Neu in 2.2 und 2.3
+
+Die roten Rahmen zeigen, was neu ist.
+
+|  |  |
+|---|---|
+| ![Live-TV mit Radio-Schalter, Boxauswahl und Leiste](docs/08-live-tv-radio.png) | ![Live-TV mit Tuner-Anzeige in der Leiste](docs/09-live-tv-tuner.png) |
+| **Radio-Schalter** über den Bouquets, Radio-Bouquets unter den TV-Bouquets; **Boxauswahl** unten links; die **Leiste** zeigt, dass die Box im Standby ist | Die Leiste zeigt auch, **welcher Tuner** den Stream an diesen PC liefert |
+| ![Ausweichen auf eine andere Box](docs/10-failover.png) | ![Wo FlowTV seine Daten ablegt](docs/07-data-location.png) |
+| **Ausweichen**: Antwortet die Box nicht, kann FlowTV eine andere nehmen – du wählst, welche Boxen, und ob vorher gefragt wird | **Erster Start**: FlowTV fragt, wo die Daten hinkommen – neben das Programm (portabel), ins Benutzerprofil oder in einen eigenen Ordner |
 
 ### Herunterladen und starten
 
