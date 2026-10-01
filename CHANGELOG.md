@@ -3,6 +3,26 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.3.2
+
+Untertitel sind wieder ab Werk aus. / Subtitles are off by default again.
+
+**Deutsch**
+
+- **Behoben: Untertitel liefen von selbst** – bei Sendern mit Untertiteln oft
+  „Deutsch für Hörgeschädigte“, obwohl „Untertitel anzeigen“ (Einstellungen →
+  Wiedergabe) ab Werk aus steht. Jetzt bleiben sie aus, bis du sie bei einem
+  Sender einschaltest (das merkt sich FlowTV je Sender) oder den Schalter
+  anmachst.
+
+**English**
+
+- **Fixed: subtitles switched on by themselves** – on channels with subtitles
+  often “German for the hearing impaired”, although “Show subtitles”
+  (Settings → Playback) is off by default. Now they stay off until you switch
+  them on for a channel (FlowTV remembers that per channel) or turn the switch
+  on.
+
 ## 2.3.1
 
 Behebungen beim Beenden und beim Löschen aller Daten. /
