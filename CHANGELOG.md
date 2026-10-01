@@ -3,6 +3,39 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.3.1
+
+Behebungen beim Beenden und beim Löschen aller Daten. /
+Fixes for closing FlowTV and for deleting all data.
+
+**Deutsch**
+
+- **Behoben: FlowTV konnte nach dem Schließen ohne Fenster weiterlaufen**
+  (im Task-Manager sichtbar) und hielt seinen Ordner fest – vor allem nach
+  „Alle gespeicherten Daten löschen“. Ist das Hauptfenster zu, beendet sich
+  FlowTV jetzt immer.
+- **Behoben: „Cannot re-show a closed window“**, wenn FlowTV gestartet wurde,
+  während es sich gerade beendete. Der neue Start wartet jetzt, bis das alte
+  FlowTV zu ist, und öffnet sich dann.
+- **„Alle gespeicherten Daten löschen“ zeigt, dass gelöscht wird**, und
+  FlowTV schließt sich erst, wenn wirklich alles weg ist – vorher blieb die
+  Programmzeitschrift liegen. Klappt es nicht ganz, steht da, was übrig ist,
+  mit dem Knopf „FlowTV schließen“.
+
+**English**
+
+- **Fixed: FlowTV could keep running without a window after closing**
+  (visible in Task Manager) and kept its folder locked – mostly after
+  “Delete all saved data”. Once the main window is closed, FlowTV now always
+  exits.
+- **Fixed: “Cannot re-show a closed window”** when FlowTV was started while it
+  was still closing. The new start now waits until the old FlowTV has ended and
+  then opens.
+- **“Delete all saved data” shows that it is deleting**, and FlowTV only closes
+  once everything is really gone – before, the programme guide was left
+  behind. If not everything can be deleted, it says what is left and offers
+  “Close FlowTV”.
+
 ## 2.3.0
 
 Mehrere Boxen, Daten wohin du willst, Radio – und ein besserer TV-Guide. /
