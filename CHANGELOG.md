@@ -3,6 +3,72 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.4.0
+
+Sicherung wie im Menü der Box, Einrichtung und Mac verbessert. /
+Backup like the receiver menu, setup and Mac improved.
+
+**Deutsch**
+
+- **Neu: Einstellungssicherung wie im Menü von openATV.** Vorausgewählt ist,
+  was openATV selbst sichert – Senderlisten, Timer, Einstellungen,
+  Cam-Konfiguration, Netzwerk, Skin-Anpassungen und Paketquellen. In einem
+  Box-Browser kreuzt du Ordner und einzelne Dateien beliebig tief dazu oder
+  nimmst sie heraus. Gespeichert wird im Format der Box
+  (`backup_<Image>_<Box>/enigma2settingsbackup.tar.gz`) samt Liste deiner
+  Plugins: Ordner auf einen USB-Stick kopieren, und die Box findet die
+  Sicherung beim Wiederherstellen. Eine ältere Sicherung im selben Ordner
+  bekommt das Datum vorn dran. Benutzerdateien und Programme werden nie
+  gesichert – sie passen nach einem Wechsel der Image-Version nicht mehr.
+- **Vollsicherung:** Einstellungssicherungen werden nicht mehr fälschlich als
+  Vollsicherung angeboten.
+- **Behoben: FlowTV fror beim Umschalten ein** – am Mac bis zu zwei Minuten,
+  beim Löschen aller Daten ganz. Das Anhalten des alten Senders läuft jetzt im
+  Hintergrund.
+- **Einrichtung:** „Weiter“ erst, wenn eine Box gewählt oder eingetragen ist;
+  bei „Kein Dateizugriff“ steht jetzt der Grund dabei; die Picon-Prüfung ist
+  nicht mehr grundlos gelb.
+- **Einstellungen:** „Dateizugriff“ steht direkt unter „Streaming“.
+- **Terminal: Markieren über mehrere Zeilen.** Mit gedrückter Maustaste lässt
+  sich beliebig viel Ausgabe markieren. Kopieren mit Strg+C (Mac: Cmd+C) oder
+  Rechtsklick → „Kopieren“, Strg+A markiert alles.
+- **Update-Hinweis:** Wer eine Testversion hat, bekommt die fertige Version mit
+  derselben Nummer angeboten.
+- **Mac:** FlowTV kommt ins Heimnetz („Lokales Netzwerk“), echtes Vollbild.
+- **Diagnose-Export und Protokoll:** Versionsnummern bleiben lesbar; schlägt
+  ein Verbindungstest oder die Suche nach der Box fehl, steht der Grund im
+  Protokoll.
+
+**English**
+
+- **New: settings backup like the openATV menu.** Preselected is what openATV
+  backs up itself – channel lists, timers, settings, cam configuration,
+  network, skin customisations and package feeds. In a box browser you tick
+  further folders and single files at any depth or leave some out. It is
+  saved in the receiver’s own format
+  (`backup_<image>_<box>/enigma2settingsbackup.tar.gz`) including the list of
+  your plugins: copy the folder to a USB stick and the box finds the backup
+  when restoring. An older backup in the same folder gets the date in front.
+  User files and programs are never backed up – they no longer fit after a
+  change of image version.
+- **Full backup:** settings backups are no longer offered as a full backup.
+- **Fixed: FlowTV froze when switching channels** – on the Mac for up to two
+  minutes, completely when deleting all data. Stopping the old channel now
+  runs in the background.
+- **Setup:** “Next” only once a receiver is chosen or entered; “No file
+  access” now tells the reason; the picon check is no longer yellow for no
+  reason.
+- **Settings:** “File access” is now right below “Streaming”.
+- **Terminal: select across lines.** Hold the mouse button to select as much
+  output as you like. Copy with Ctrl+C (Mac: Cmd+C) or right-click → “Copy”,
+  Ctrl+A selects everything.
+- **Update notice:** test versions are offered the final version with the same
+  number.
+- **Mac:** FlowTV reaches the home network (“Local Network”), real full
+  screen.
+- **Diagnostics export and log:** version numbers stay readable; when a
+  connection test or the receiver search fails, the reason is in the log.
+
 ## 2.3.2
 
 Untertitel sind wieder ab Werk aus. / Subtitles are off by default again.

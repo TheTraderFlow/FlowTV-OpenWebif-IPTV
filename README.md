@@ -39,7 +39,8 @@ screen while switching channels.
 - **Recordings**: watch with resume, download over FTP/SFTP/HTTP with a queue,
   rename, move, delete.
 - **Box control**: standby, restart, shutdown, a terminal with prepared commands
-  and a backup of the box settings.
+  (select and copy across lines), a **settings backup like the openATV menu**
+  and fetching full backups of the box.
 - **Dark, TiviMate-like interface**, German and English, adjustable font size and
   freely assignable keys.
 
@@ -81,6 +82,22 @@ The red frames mark what is new. These pictures show the German interface.
 | **Radio switch** above the bouquets, radio bouquets below the TV ones; **box selection** at the bottom left; the **status bar** shows that the box is in standby | The status bar also shows **which tuner** delivers the stream to this PC |
 | ![Failover to another box](docs/10-failover.png) | ![Where FlowTV keeps its data](docs/07-data-location.png) |
 | **Failover**: if the box does not answer, FlowTV can switch to another one – you choose which boxes and whether it asks first | **First start**: FlowTV asks where to keep its data – next to the program (portable), in the user profile or in a folder of your choice |
+
+### New in 2.4
+
+- **Settings backup like the openATV menu.** Preselected is what openATV backs
+  up itself – channel lists, timers, settings, cam configuration, network, skin
+  customisations, package feeds. In a box browser you tick further folders and
+  files at any depth, or leave some out. The backup is saved in the receiver's
+  own format (`backup_<image>_<box>/enigma2settingsbackup.tar.gz`, with the
+  list of your plugins): copy the folder to a USB stick and the box finds it
+  under *Restore settings*. User files and programs are never included.
+- **No more freezing when switching channels** – stopping the old channel now
+  runs in the background.
+- **Setup and terminal:** “Next” only once a box is chosen; “No file access”
+  says why; the terminal selects and copies across lines.
+
+The full list is in the [changelog](CHANGELOG.md).
 
 ### Download and start
 
@@ -218,7 +235,8 @@ As soon as a version runs properly, it will be on the
 **On the receiver:**
 
 - **OpenWebif must be running** and reachable – without it, nothing works.
-- **SSH** (Dropbear or OpenSSH) for the terminal and the settings backup.
+- **SSH** (Dropbear or OpenSSH) for the terminal and the settings backup
+  (`tar` on the box; every Enigma2 image has it).
 - **FTP or SFTP** for downloading recordings.
 - For encrypted channels over a stream relay: the relay service and its list at
   `/etc/enigma2/whitelist_streamrelay`.
@@ -243,7 +261,8 @@ every value shows where it came from: default, detected or set by you.
 ### Tested on one box only – please read this
 
 This project has one developer and one receiver. **Everything you see was tested
-on a GigaBlue UHD TRIO 4K with openATV 7.6 and OpenWebif 2.4.**
+on a GigaBlue UHD TRIO 4K** – up to 2.3 with openATV 7.6 and OpenWebif 2.4,
+**since 2.4 with openATV 8.0.1.**
 
 - **Receivers with several tuners could not be tested.** The most delicate part
   sits exactly there: counting tuners per reception type, comparing
@@ -334,7 +353,9 @@ und beim Umschalten gibt es nie ein schwarzes Bild.
 - **Aufnahmen**: ansehen mit Fortsetzen, herunterladen über FTP/SFTP/HTTP mit
   Warteschlange, umbenennen, verschieben, löschen.
 - **Box-Steuerung**: Standby, Neustart, Ausschalten, ein Terminal mit
-  vorbereiteten Befehlen und eine Sicherung der Box-Einstellungen.
+  vorbereiteten Befehlen (Markieren und Kopieren über mehrere Zeilen), eine
+  **Einstellungssicherung wie im Menü von openATV** und das Holen von
+  Vollsicherungen der Box.
 - **Dunkle, TiviMate-ähnliche Oberfläche**, Deutsch und Englisch, einstellbare
   Schriftgröße und frei belegbare Tasten.
 
@@ -376,6 +397,25 @@ Die roten Rahmen zeigen, was neu ist.
 | **Radio-Schalter** über den Bouquets, Radio-Bouquets unter den TV-Bouquets; **Boxauswahl** unten links; die **Leiste** zeigt, dass die Box im Standby ist | Die Leiste zeigt auch, **welcher Tuner** den Stream an diesen PC liefert |
 | ![Ausweichen auf eine andere Box](docs/10-failover.png) | ![Wo FlowTV seine Daten ablegt](docs/07-data-location.png) |
 | **Ausweichen**: Antwortet die Box nicht, kann FlowTV eine andere nehmen – du wählst, welche Boxen, und ob vorher gefragt wird | **Erster Start**: FlowTV fragt, wo die Daten hinkommen – neben das Programm (portabel), ins Benutzerprofil oder in einen eigenen Ordner |
+
+### Neu in 2.4
+
+- **Einstellungssicherung wie im Menü von openATV.** Vorausgewählt ist, was
+  openATV selbst sichert – Senderlisten, Timer, Einstellungen,
+  Cam-Konfiguration, Netzwerk, Skin-Anpassungen, Paketquellen. In einem
+  Box-Browser kreuzt du Ordner und Dateien beliebig tief dazu oder nimmst sie
+  heraus. Gespeichert wird im Format der Box
+  (`backup_<Image>_<Box>/enigma2settingsbackup.tar.gz`, samt Liste deiner
+  Plugins): Ordner auf einen USB-Stick kopieren, und die Box findet die
+  Sicherung unter *Einstellungen wiederherstellen*. Benutzerdateien und
+  Programme kommen nie hinein.
+- **Kein Einfrieren mehr beim Umschalten** – das Anhalten des alten Senders
+  läuft jetzt im Hintergrund.
+- **Einrichtung und Terminal:** „Weiter“ erst, wenn eine Box gewählt ist; bei
+  „Kein Dateizugriff“ steht der Grund dabei; im Terminal lässt sich über
+  mehrere Zeilen markieren und kopieren.
+
+Alles Weitere steht in den [Änderungen](CHANGELOG.md).
 
 ### Herunterladen und starten
 
@@ -516,7 +556,8 @@ entfernt. Sobald eine Version richtig läuft, steht sie wieder auf der
 **Auf der Box:**
 
 - **OpenWebif muss laufen** und erreichbar sein – ohne das geht gar nichts.
-- **SSH** (Dropbear oder OpenSSH) für das Terminal und die Einstellungssicherung.
+- **SSH** (Dropbear oder OpenSSH) für das Terminal und die Einstellungssicherung
+  (`tar` auf der Box; hat jedes Enigma2-Image).
 - **FTP oder SFTP** zum Herunterladen von Aufnahmen.
 - Für verschlüsselte Sender über ein Stream-Relay: der Relay-Dienst und seine
   Liste unter `/etc/enigma2/whitelist_streamrelay`.
@@ -541,8 +582,8 @@ selbst gesetzt.
 ### Geprüft nur an einer Box – bitte lesen
 
 Hinter diesem Projekt stehen ein Entwickler und ein Receiver. **Alles, was du
-hier siehst, ist an einer GigaBlue UHD TRIO 4K mit openATV 7.6 und OpenWebif 2.4
-geprüft worden.**
+hier siehst, ist an einer GigaBlue UHD TRIO 4K geprüft worden** – bis 2.3 mit
+openATV 7.6 und OpenWebif 2.4, **seit 2.4 mit openATV 8.0.1.**
 
 - **Receiver mit mehreren Tunern konnten nicht geprüft werden.** Genau dort
   sitzt der empfindlichste Teil: die Tunerzählung nach Empfangsart, der
