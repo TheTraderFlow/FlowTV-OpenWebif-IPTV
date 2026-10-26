@@ -3,6 +3,79 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.5.0
+
+Klarere Einrichtung, Steuerleiste für Aufnahmen im Vollbild, Vollsicherungen löschen, Mac wieder dabei. /
+Clearer setup, control bar for recordings in fullscreen, delete full backups, Mac is back.
+
+**Deutsch**
+
+- **Einrichtung: Seite „Zugangsdaten“.** Webzugriff (OpenWebif) und
+  Dateizugriff (FTP/SFTP) stehen jetzt getrennt mit eigener Überschrift, klar
+  beschrifteten Feldern und je einem Prüfknopf mit grünem oder rotem Punkt.
+  Wer für FTP andere Zugangsdaten hat, kann sie gleich hier eintragen; ab Werk
+  gelten dieselben wie beim Webzugriff. Der Name der Box steht auf derselben
+  Seite.
+- **Aufnahmen im Vollbild mit Steuerleiste:** Zeitleiste zum Springen,
+  30 Sekunden zurück und vor, Pause und der Titel. Die Pfeiltasten spulen
+  während einer Aufnahme, statt auf einen Sender umzuschalten.
+- **Vollsicherungen auf der Box löschen:** Im Fenster der Vollsicherungen hat
+  jeder Eintrag einen Mülleimer. Vorher fragt FlowTV mit dem Namen der
+  Sicherung nach.
+- **Fortsetzen nimmt die zuletzt gemerkte Stelle** – egal ob du zuletzt am
+  Fernseher oder in FlowTV geschaut hast. Bisher gewann immer die weitere.
+- **Neu: „EPG jetzt aktualisieren“** im TV-Guide und unter Einstellungen →
+  EPG. Das Programm kommt sofort neu von der Box, auch gleich nach dem Leeren
+  des Zwischenspeichers.
+- **Einstellungen:** „Dateizugriff“ steht direkt unter „Verbindung“.
+- **Behoben:** Änderungen an Zugangsdaten in der Zusammenfassung der
+  Einrichtung gingen beim „Fertig“ verloren.
+- **Sicherheit:** Picons und importierte Profile werden strenger geprüft.
+- **Stabiler:** Lautstärke und Tonspuren können das Fenster nicht mehr
+  einfrieren lassen.
+- **Behoben:** Beim Umschalten konnte das Bild des vorigen Senders stehen
+  bleiben, während schon der Ton des neuen lief.
+- **Behoben:** Eine Aufnahme sprang beim Wechsel ins Vollbild an den Anfang.
+- **Mac wieder zum Herunterladen (Vorschau).** Geprüft in einer macOS-VM an
+  einer Box: Bild, Umschalten, Menüs.
+- **Neu: Einstellung „Tonausgabe“** (Automatisch/Aus) unter Wiedergabe.
+- **Mac und Linux:** Hängt die Tonausgabe des Systems, blieb das Bild nach dem
+  ersten Bild stehen und das Umschalten hing. FlowTV erkennt das jetzt und
+  spielt den Sender ohne Ton weiter, mit Hinweis.
+- **Mac und Linux:** ausführlicheres Protokoll für Fehlermeldungen.
+
+**English**
+
+- **Setup: “Credentials” page.** Web access (OpenWebif) and file access
+  (FTP/SFTP) are now separate, each with its own heading, clearly labelled
+  fields and a test button with a green or red dot. If your FTP login differs,
+  enter it right there; by default the web login is used. The box name is on
+  the same page.
+- **Recordings in fullscreen with a control bar:** timeline to jump, 30 seconds
+  back and forward, pause and the title. The arrow keys seek during a
+  recording instead of switching channels.
+- **Delete full backups on the box:** every entry in the full backup window has
+  a bin icon. FlowTV asks first and names the backup.
+- **Resume uses the most recently saved position** – whether you last watched
+  on the TV or in FlowTV. Before, the further one always won.
+- **New: “Refresh EPG now”** in the TV guide and under Settings → EPG. The
+  programme guide is fetched from the box right away, also straight after
+  clearing the cache.
+- **Settings:** “File access” is now right below “Connection”.
+- **Fixed:** changes to credentials on the setup summary were lost on “Finish”.
+- **Security:** picons and imported profiles are checked more strictly.
+- **More stable:** volume and audio tracks can no longer freeze the window.
+- **Fixed:** when switching channels, the previous channel's picture could
+  stay on screen while the new channel's sound was already playing.
+- **Fixed:** a recording jumped back to the start when switching to fullscreen.
+- **Mac download is back (preview).** Tested in a macOS virtual machine against
+  a receiver: picture, switching, menus.
+- **New: “Audio output” setting** (Automatic/Off) under Playback.
+- **Mac and Linux:** if the system's audio output hangs, the picture froze after
+  the first frame and switching hung. FlowTV now detects this and keeps playing
+  the channel without sound, with a notice.
+- **Mac and Linux:** more detailed log for bug reports.
+
 ## 2.4.0
 
 Sicherung wie im Menü der Box, Einrichtung und Mac verbessert. /

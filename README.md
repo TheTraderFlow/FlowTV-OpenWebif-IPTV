@@ -2,7 +2,7 @@
 
 <img src="docs/flowtv-logo.png" alt="FlowTV – OpenWebif-IPTV" width="520">
 
-**Client for Enigma2 receivers over OpenWebif – Windows, plus Linux as a preview**
+**Client for Enigma2 receivers over OpenWebif – Windows, plus Linux and Mac as previews**
 
 [Deutsch](#deutsch) · [English](#english) · [Download](../../releases/latest)
 
@@ -50,7 +50,7 @@ FlowTV 1.0 was built on WPF, Microsoft's interface technology that only exists
 on Windows. For 2.0 the whole interface was **rebuilt on Avalonia**, which runs
 on Windows, Linux and macOS from one and the same code. What stays the same:
 the functions, the look, your settings. What changes: the same FlowTV can now
-also run on **Linux** (from 2.0, as a preview) – and later on the **Mac** –
+also run on **Linux** (from 2.0) and the **Mac** (from 2.5), both as previews –
 without three separate programs that would drift apart.
 
 On the way, many things from everyday use got better – see the
@@ -103,7 +103,7 @@ The full list is in the [changelog](CHANGELOG.md).
 
 1. Get the latest `FlowTV-<version>-win-x64.zip` from the
    [Releases page](../../releases/latest). *(Linux: see
-   [below](#linux-preview).)*
+   [below](#linux-preview); Mac: [below](#mac-preview).)*
 2. Unpack it to any folder – for example `C:\Programme\FlowTV`. **Do not run it
    from inside the ZIP.**
 3. Start `FlowTV.exe`.
@@ -215,12 +215,79 @@ same there, it is WSL's sound bridge, not FlowTV. On a real Linux PC it has not
 been tested yet, nor on the other distributions in the table. Reports are very
 welcome.
 
-### Mac – currently no download
+### Mac (preview)
 
-A Mac version is in the works, but **there is currently no download**. The
-earlier test packages did not work reliably on real Macs and have been removed.
-As soon as a version runs properly, it will be on the
-[Releases page](../../releases/latest) again.
+There is a Mac version again: `FlowTV-<version>-osx-x64.tar.gz` on the
+[Releases page](../../releases/latest). The package contains an illustrated
+guide, **`FlowTV-Mac-Anleitung.pdf`** (German), with a picture of every step.
+
+**Honestly: it is a preview.** It was tested in a **macOS 15 virtual machine**
+against a receiver: setup, channel list, picture, switching, menus. In that
+virtual machine the sound output hangs – plain VLC does the same there. FlowTV
+detects this and keeps playing without sound (with a notice); under Settings →
+Playback → Audio output you can switch sound off for good. On a real Mac sound
+should work, but we could not check that ourselves. Reports are very welcome.
+
+**What you need**
+
+- macOS 13 (Ventura) or later.
+- Intel or Apple silicon (M1–M4): it is an **Intel build**, because LibVLC for the
+  Mac only exists for Intel as a package. On Apple silicon it runs through
+  **Rosetta 2** – if that is missing, macOS offers to install it on the first
+  start (click “Install”), or in Terminal:
+  `softwareupdate --install-rosetta --agree-to-license`
+- Nothing else: VLC and .NET are inside the app.
+
+**Updating from an older version:** drag the old `FlowTV` from **Applications**
+to the **Trash**, then continue with step 1. Your settings stay. macOS asks for
+the approval (steps 3–5) once more for every new version.
+
+**Install and start – step by step**
+
+FlowTV is not notarized by Apple (that costs money this project does not have).
+That is why macOS asks once on the first start. You do **not** need Terminal for
+this.
+
+1. **Unpack.** Double-click `FlowTV-<version>-osx-x64.tar.gz` in Finder. You get
+   a folder with **FlowTV** (the app) and the PDF guide.
+2. **Move to Applications.** Drag **FlowTV** into **Applications** (left side of
+   the Finder window).
+3. **First start.** Double-click **FlowTV** in Applications. macOS says FlowTV
+   was not opened because Apple could not check it, with the buttons **Done**
+   and **Move to Trash**. Click **Done** – **not** “Move to Trash”.
+4. **Allow it in System Settings.** Apple menu → **System Settings → Privacy &
+   Security**, scroll all the way down to **Security**. There it says
+   *“FlowTV” was blocked to protect your Mac.* Click **Open Anyway** next to it
+   and confirm with your **Mac password** (or Touch ID).
+5. **Confirm once more.** A window *Open “FlowTV”?* appears. Click the grey
+   **Open Anyway** in the middle – careful: the **blue** button at the top is
+   “Move to Trash”. FlowTV now starts; from now on a double-click is enough.
+6. **Allow the local network.** As soon as FlowTV searches for your receiver
+   (setup assistant → “Find the box”), macOS asks: *Allow “FlowTV” to find
+   devices on local networks?* Click **Allow** – without it FlowTV cannot reach
+   your receiver. If FlowTV already shows “No route to host” behind the
+   question, that is normal: just click “Find the box” again after allowing.
+7. **Set up the box.** The assistant finds your receiver; otherwise enter its IP
+   address by hand. Load the channel list, pick a channel – done.
+8. **Allow the keychain.** When FlowTV saves a password of your box for the first
+   time, macOS asks whether FlowTV may use the **keychain**. Enter your Mac
+   password and click **Always Allow**. Only the key for your box password is
+   kept there – FlowTV never stores it in plain text.
+
+**If something went wrong**
+
+- *“FlowTV is damaged and can’t be opened”* is the same block in other words.
+  Open **Terminal** (Applications → Utilities), enter
+  `xattr -dr com.apple.quarantine /Applications/FlowTV.app` and start FlowTV
+  normally.
+- Clicked **“Don’t Allow”** for the local network by mistake? **System Settings →
+  Privacy & Security → Local Network**, switch **FlowTV** on, restart FlowTV.
+- Settings live in `~/Library/Application Support/FlowTV` (in Finder: Go → Go to
+  Folder, Cmd+Shift+G).
+
+**Please report back** in an [issue](../../issues): your Mac model, chip and
+macOS version, what worked and what did not, and the **diagnostics export**
+(Settings → Diagnostics → Export diagnostics). It contains no passwords.
 
 ### What you need
 
@@ -365,8 +432,8 @@ FlowTV 1.0 war mit WPF gebaut, Microsofts Oberflächentechnik, die es nur unter
 Windows gibt. Für 2.0 ist die ganze Oberfläche **auf Avalonia neu gebaut**
 worden – das läuft unter Windows, Linux und macOS aus ein und demselben Code.
 Was bleibt: die Funktionen, das Aussehen, deine Einstellungen. Was sich ändert:
-Dasselbe FlowTV läuft jetzt auch auf **Linux** (ab 2.0, als Vorschau) – und
-später auf dem **Mac** –, ohne drei getrennte Programme, die auseinanderlaufen.
+Dasselbe FlowTV läuft jetzt auch auf **Linux** (ab 2.0) und dem **Mac** (ab 2.5),
+beide als Vorschau – ohne drei getrennte Programme, die auseinanderlaufen.
 
 Nebenbei ist vieles aus dem Alltag besser geworden – siehe die
 [Änderungen](CHANGELOG.md).
@@ -421,7 +488,7 @@ Alles Weitere steht in den [Änderungen](CHANGELOG.md).
 
 1. Die neueste `FlowTV-<Version>-win-x64.zip` von der
    [Releases-Seite](../../releases/latest) holen. *(Linux: siehe
-   [unten](#linux-vorschau).)*
+   [unten](#linux-vorschau); Mac: [unten](#mac-vorschau).)*
 2. In einen beliebigen Ordner **entpacken** – zum Beispiel
    `C:\Programme\FlowTV`. **Nicht aus der ZIP heraus starten.**
 3. `FlowTV.exe` starten.
@@ -536,12 +603,85 @@ normale VLC tut dort dasselbe, es liegt an der Tonbrücke von WSL, nicht an
 FlowTV. Auf einem echten Linux-PC ist sie noch nicht geprüft, ebenso wenig auf
 den übrigen Distributionen der Tabelle. Rückmeldungen sind sehr willkommen.
 
-### Mac – zurzeit kein Download
+### Mac (Vorschau)
 
-Eine Mac-Version ist in Arbeit, **zurzeit gibt es aber keinen Download**. Die
-bisherigen Testpakete liefen auf echten Macs nicht zuverlässig und sind deshalb
-entfernt. Sobald eine Version richtig läuft, steht sie wieder auf der
-[Releases-Seite](../../releases/latest).
+Es gibt wieder eine Mac-Version: `FlowTV-<Version>-osx-x64.tar.gz` auf der
+[Releases-Seite](../../releases/latest). Im Paket liegt eine bebilderte
+Anleitung, **`FlowTV-Mac-Anleitung.pdf`**, mit einem Bild zu jedem Schritt.
+
+**Ehrlich gesagt: Es ist eine Vorschau.** Geprüft wurde sie in einer
+**virtuellen Maschine mit macOS 15** an einer Box: Einrichtung, Senderliste,
+Bild, Umschalten, Menüs. In dieser virtuellen Maschine hängt die Tonausgabe –
+das normale VLC tut dort dasselbe. FlowTV erkennt das und spielt ohne Ton weiter
+(mit Hinweis); unter Einstellungen → Wiedergabe → Tonausgabe lässt sich der Ton
+ganz abschalten. Auf einem echten Mac sollte der Ton gehen, selbst prüfen
+konnten wir das nicht. Rückmeldungen sind sehr willkommen.
+
+**Was du brauchst**
+
+- macOS 13 (Ventura) oder neuer.
+- Intel oder Apple-Chip (M1–M4): Es ist ein **Intel-Build**, weil es LibVLC für
+  den Mac nur für Intel als Paket gibt. Auf Apple-Chip läuft es über
+  **Rosetta 2** – fehlt es, bietet macOS die Installation beim ersten Start an
+  („Installieren“ klicken), oder im Terminal:
+  `softwareupdate --install-rosetta --agree-to-license`
+- Sonst nichts: VLC und .NET stecken in der App.
+
+**Update von einer älteren Version:** Die alte `FlowTV` aus **Programme** in den
+**Papierkorb** ziehen und mit Schritt 1 weitermachen. Deine Einstellungen
+bleiben. Die Freigabe (Schritte 3–5) fragt macOS bei jeder neuen Version noch
+einmal ab.
+
+**Installieren und starten – Schritt für Schritt**
+
+FlowTV ist nicht von Apple beglaubigt (das kostet Geld, das dieses Projekt
+nicht hat). Deshalb fragt macOS beim ersten Start einmal nach. Ein **Terminal
+brauchst du dafür nicht**.
+
+1. **Entpacken.** Im Finder auf `FlowTV-<Version>-osx-x64.tar.gz` doppelklicken.
+   Es entsteht ein Ordner mit **FlowTV** (dem Programm) und der PDF-Anleitung.
+2. **In „Programme“ ziehen.** **FlowTV** in den Ordner **Programme** ziehen
+   (links im Finder-Fenster).
+3. **Erster Start.** In Programme auf **FlowTV** doppelklicken. macOS meldet,
+   dass FlowTV nicht geöffnet wurde, weil Apple es nicht überprüfen konnte –
+   mit den Knöpfen **„Fertig“** und **„In den Papierkorb legen“**. Auf
+   **„Fertig“** klicken, **nicht** auf „In den Papierkorb legen“.
+4. **In den Systemeinstellungen freigeben.** Apple-Menü → **Systemeinstellungen
+   → Datenschutz & Sicherheit**, ganz nach unten zum Abschnitt **Sicherheit**
+   scrollen. Dort steht *„FlowTV“ wurde blockiert, um deinen Mac zu schützen.*
+   Daneben auf **„Dennoch öffnen“** klicken und mit dem **Mac-Passwort** (oder
+   Touch ID) bestätigen.
+5. **Rückfrage bestätigen.** Es erscheint *„FlowTV“ öffnen?*. Den grauen Knopf
+   **„Dennoch öffnen“** in der Mitte nehmen – Achtung: Der **blaue** Knopf oben
+   ist „In den Papierkorb legen“. FlowTV startet jetzt; ab dann reicht ein
+   Doppelklick.
+6. **Zugriff aufs Heimnetz erlauben.** Sobald FlowTV deine Box sucht
+   (Einrichtungsassistent → „Box suchen“), fragt macOS: *Darf „FlowTV“ nach
+   Geräten in lokalen Netzwerken suchen?* Auf **„Erlauben“** klicken – ohne das
+   erreicht FlowTV deine Box nicht. Steht hinter der Frage schon „No route to
+   host“, ist das normal: Nach „Erlauben“ einfach noch einmal „Box suchen“.
+7. **Box einrichten.** Der Assistent findet deine Box; sonst ihre IP-Adresse von
+   Hand eintragen. Senderliste laden, Sender wählen, fertig.
+8. **Schlüsselbund erlauben.** Speichert FlowTV zum ersten Mal ein Passwort
+   deiner Box, fragt macOS, ob FlowTV den **Schlüsselbund** benutzen darf.
+   Mac-Passwort eingeben und **„Immer erlauben“** klicken. Dort liegt nur der
+   Schlüssel für das Passwort deiner Box – im Klartext speichert FlowTV es nie.
+
+**Wenn etwas schiefging**
+
+- *„FlowTV ist beschädigt und kann nicht geöffnet werden“* ist dieselbe Sperre
+  in anderen Worten. **Terminal** öffnen (Programme → Dienstprogramme),
+  `xattr -dr com.apple.quarantine /Applications/FlowTV.app` eingeben und FlowTV
+  normal starten.
+- Beim lokalen Netzwerk aus Versehen **„Nicht erlauben“** gewählt?
+  **Systemeinstellungen → Datenschutz & Sicherheit → Lokales Netzwerk**, den
+  Schalter bei **FlowTV** einschalten, FlowTV neu starten.
+- Die Einstellungen liegen in `~/Library/Application Support/FlowTV` (im Finder:
+  Gehe zu → Gehe zum Ordner, Cmd+Umschalt+G).
+
+**Bitte Rückmeldung geben** in einem [Issue](../../issues): Mac-Modell, Chip und
+macOS-Version, was ging und was nicht, und den **Diagnose-Export**
+(Einstellungen → Diagnose → Diagnosedaten exportieren). Er enthält keine Passwörter.
 
 ### Was du brauchst
 
