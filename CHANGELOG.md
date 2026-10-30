@@ -3,6 +3,27 @@
 Alle spürbaren Änderungen an FlowTV, neueste zuerst.
 All notable changes to FlowTV, newest first.
 
+## 2.6.0
+
+Neu: FlowTV für 32-Bit-Windows. /
+New: FlowTV for 32-bit Windows.
+
+**Deutsch**
+
+- **Neu: Paket für 32-Bit-Windows** (`FlowTV-2.6.0-win-x86.zip`), als
+  Vorschau. Gedacht für ältere Rechner mit 32-Bit-Windows 10. Wer ein
+  64-Bit-Windows hat (alle Rechner mit Windows 11), nimmt weiter das
+  `win-x64`-Paket. Die Update-Prüfung erkennt, welches Paket du hast.
+- Für Windows 64 Bit, Linux und Mac ändert sich sonst nichts.
+
+**English**
+
+- **New: package for 32-bit Windows** (`FlowTV-2.6.0-win-x86.zip`), as a
+  preview. Meant for older PCs with 32-bit Windows 10. If you have 64-bit
+  Windows (every PC with Windows 11), keep using the `win-x64` package. The
+  update check knows which package you have.
+- Nothing else changes for 64-bit Windows, Linux and Mac.
+
 ## 2.5.0
 
 Klarere Einrichtung, Steuerleiste für Aufnahmen im Vollbild, Vollsicherungen löschen, Mac wieder dabei. /

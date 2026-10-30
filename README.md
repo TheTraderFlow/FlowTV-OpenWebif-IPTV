@@ -102,7 +102,8 @@ The full list is in the [changelog](CHANGELOG.md).
 ### Download and start
 
 1. Get the latest `FlowTV-<version>-win-x64.zip` from the
-   [Releases page](../../releases/latest). *(Linux: see
+   [Releases page](../../releases/latest). *(32-bit Windows: take
+   `FlowTV-<version>-win-x86.zip` instead – a preview, see below. Linux: see
    [below](#linux-preview); Mac: [below](#mac-preview).)*
 2. Unpack it to any folder – for example `C:\Programme\FlowTV`. **Do not run it
    from inside the ZIP.**
@@ -294,6 +295,11 @@ macOS version, what worked and what did not, and the **diagnostics export**
 **On the PC – nothing to install beforehand:**
 
 - 64-bit Windows 10 or 11.
+- *32-bit Windows 10: since 2.6.0 there is a separate package `win-x86`, as a
+  preview. It could only be checked on a 64-bit PC. A 32-bit program can use at
+  most 2–4 GB of memory, so HD and especially 4K/HEVC channels may stutter on
+  older PCs. Not sure which Windows you have? Settings → System → About →
+  “System type”.*
 - No .NET: the runtime is inside the folder.
 - No VLC: LibVLC ships as its own DLLs in the `libvlc` subfolder.
 - No Visual C++ redistributable.
@@ -487,7 +493,8 @@ Alles Weitere steht in den [Änderungen](CHANGELOG.md).
 ### Herunterladen und starten
 
 1. Die neueste `FlowTV-<Version>-win-x64.zip` von der
-   [Releases-Seite](../../releases/latest) holen. *(Linux: siehe
+   [Releases-Seite](../../releases/latest) holen. *(32-Bit-Windows: stattdessen
+   `FlowTV-<Version>-win-x86.zip` – Vorschau, siehe unten. Linux: siehe
    [unten](#linux-vorschau); Mac: [unten](#mac-vorschau).)*
 2. In einen beliebigen Ordner **entpacken** – zum Beispiel
    `C:\Programme\FlowTV`. **Nicht aus der ZIP heraus starten.**
@@ -688,6 +695,11 @@ macOS-Version, was ging und was nicht, und den **Diagnose-Export**
 **Auf dem PC – nichts vorinstallieren:**
 
 - 64-Bit-Windows 10 oder 11.
+- *32-Bit-Windows 10: Seit 2.6.0 gibt es ein eigenes Paket `win-x86`, als
+  Vorschau. Geprüft werden konnte es nur auf einem 64-Bit-PC. Ein
+  32-Bit-Programm kann höchstens 2–4 GB Speicher nutzen; HD- und vor allem
+  4K/HEVC-Sender können auf älteren Rechnern ruckeln. Welches Windows du hast:
+  Einstellungen → System → Info → „Systemtyp“.*
 - Kein .NET: Die Laufzeit liegt im Ordner.
 - Kein VLC: LibVLC liegt als eigene DLL-Sammlung im Unterordner `libvlc`.
 - Kein Visual C++ Redistributable.
